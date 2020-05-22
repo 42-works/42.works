@@ -61,7 +61,7 @@ export default {
         {
           image: 'roman.jpg',
           name: 'Roman Kolpakov',
-          position: 'Senior Frontend Developer'
+          position: 'Teamlead, Fullstack Developer'
         },
         {
           image: 'rita.jpg',
