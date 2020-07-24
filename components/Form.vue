@@ -78,33 +78,46 @@ export default {
       this.email = ''
       this.message = ''
     },
-
     postForm() {
-      var req = new XMLHttpRequest();
-      req.open("POST","/sendcontacts", true);
-      req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-      req.onreadystatechange = (evt) => {
-      if (req.readyState == XMLHttpRequest.DONE && req.status == 200) {
-        console.log("contacts send");
-        this.$emit('toggleModal', req.status)
-        this.clearForm()
-      } else {
-        this.$emit('toggleModal', req.status)
+      const createHtmlForEmail = () => {
+        return `<div>
+          <div>
+            name: <b>${this.name}</b>
+          </div>
+          <div>
+            email: <b>${this.email}</b>
+          </div>
+          <div>
+            message: <b>${this.message}</b>
+          </div>
+        </div>`
       }
-     }
-     ///
-     var data = this.encode("form-name")+"=" + this.encode("contact-form")+"&"
-     +this.encode("name")+"="+this.encode(this.name)+"&"
-     +this.encode("email")+"="+this.encode(this.email)+"&"
-     +this.encode("message")+"="+this.encode(this.message);
-     console.log(data);
-     req.send(data);
-   },
 
-   encode(str) {
-     return encodeURIComponent(str).replace("%20","+");
-   }
+      const letterData = {
+        to: 'pelevin.d.y@gmail.com',
+        subject: '42.works',
+        text: 'yo',
+        html: createHtmlForEmail()
+      }
 
+      fetch('https://api.42.works/mailer', {
+        method: 'POST',
+        body: JSON.stringify(letterData),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+      .then((response) => {
+        console.log('response', response)
+        this.$emit('toggleModal', response.status)
+        this.clearForm()
+      })
+      .catch((err) => {
+        console.err('err', err)
+        this.$emit('toggleModal', response.status)
+        this.clearForm()
+      })
+    },
   }
 }
 </script>
