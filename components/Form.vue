@@ -40,7 +40,7 @@
           )
           span(v-show="errors.has('message')" class="help is-danger") {{ errors.first('message') }}
       .form__row
-        button.form__button(:class="{disable: !formIsFull}" @click="submitForm") Send message
+        button.form__button(:class="{disable: isButtonDisabled()}" @click="submitForm") Send message
 </template>
 
 <script>
@@ -50,11 +50,18 @@ export default {
       formIsFull: false,
       name: '',
       email: '',
-      message: ''
+      message: '',
+      isFormSending: false
     }
   },
 
   methods: {
+    isButtonDisabled() {
+      if (!this.formIsFull) return true
+      if (this.isFormSending) return true
+      return false
+    },
+
     checkFormIsFull() {
       this.formIsFull = Object.keys(this.fields).some(key => {
         return this[key]
@@ -80,31 +87,49 @@ export default {
     },
 
     postForm() {
-      var req = new XMLHttpRequest();
-      req.open("POST","/sendcontacts", true);
-      req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-      req.onreadystatechange = (evt) => {
-      if (req.readyState == XMLHttpRequest.DONE && req.status == 200) {
-        console.log("contacts send");
-        this.$emit('toggleModal', req.status)
-        this.clearForm()
-      } else {
-        this.$emit('toggleModal', req.status)
+      this.isFormSending = true
+
+      const createHtmlForEmail = () => {
+        return `<div>
+          <div>
+            name: <b>${this.name}</b>
+          </div>
+          <div>
+            email: <b>${this.email}</b>
+          </div>
+          <div>
+            message: <b>${this.message}</b>
+          </div>
+        </div>`
       }
-     }
-     ///
-     var data = this.encode("form-name")+"=" + this.encode("contact-form")+"&"
-     +this.encode("name")+"="+this.encode(this.name)+"&"
-     +this.encode("email")+"="+this.encode(this.email)+"&"
-     +this.encode("message")+"="+this.encode(this.message);
-     console.log(data);
-     req.send(data);
-   },
 
-   encode(str) {
-     return encodeURIComponent(str).replace("%20","+");
-   }
+      const letterData = {
+        to: 'boris@adimov.ru',
+        subject: '42.works contact form',
+        text: 'yo',
+        html: createHtmlForEmail()
+      }
 
+      fetch('https://api.42.works/mailer', {
+        method: 'POST',
+        body: JSON.stringify(letterData),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+      .then((response) => {
+        // console.log('response', response)
+        this.isFormSending = false
+        this.$emit('toggleModal', response.status)
+        this.clearForm()
+      })
+      .catch((err) => {
+        console.err('err', err)
+        this.isFormSending = false
+        this.$emit('toggleModal', response.status)
+        this.clearForm()
+      })
+    },
   }
 }
 </script>
