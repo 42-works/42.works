@@ -40,7 +40,7 @@
           )
           span(v-show="errors.has('message')" class="help is-danger") {{ errors.first('message') }}
       .form__row
-        button.form__button(:class="{disable: !formIsFull}" @click="submitForm") Send message
+        button.form__button(:class="{disable: isButtonDisabled()}" @click="submitForm") Send message
 </template>
 
 <script>
@@ -50,11 +50,18 @@ export default {
       formIsFull: false,
       name: '',
       email: '',
-      message: ''
+      message: '',
+      isFormSending: false
     }
   },
 
   methods: {
+    isButtonDisabled() {
+      if (!this.formIsFull) return true
+      if (this.isFormSending) return true
+      return false
+    },
+
     checkFormIsFull() {
       this.formIsFull = Object.keys(this.fields).some(key => {
         return this[key]
@@ -78,7 +85,10 @@ export default {
       this.email = ''
       this.message = ''
     },
+
     postForm() {
+      this.isFormSending = true
+
       const createHtmlForEmail = () => {
         return `<div>
           <div>
@@ -94,8 +104,8 @@ export default {
       }
 
       const letterData = {
-        to: 'pelevin.d.y@gmail.com',
-        subject: '42.works',
+        to: 'boris@adimov.ru',
+        subject: '42.works contact form',
         text: 'yo',
         html: createHtmlForEmail()
       }
@@ -108,12 +118,14 @@ export default {
         }
       })
       .then((response) => {
-        console.log('response', response)
+        // console.log('response', response)
+        this.isFormSending = false
         this.$emit('toggleModal', response.status)
         this.clearForm()
       })
       .catch((err) => {
         console.err('err', err)
+        this.isFormSending = false
         this.$emit('toggleModal', response.status)
         this.clearForm()
       })
