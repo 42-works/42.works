@@ -38,11 +38,11 @@ export default {
           name: 'Boris Adimov',
           position: 'CTO'
         },
-        {
-          image: 'alexander.jpg',
-          name: 'Belokon Alexandr',
-          position: 'Teamlead, Fullstack Developer'
-        },
+        // {
+        //   image: 'alexander.jpg',
+        //   name: 'Belokon Alexandr',
+        //   position: 'Teamlead, Fullstack Developer'
+        // },
         {
           image: 'eugene.jpg',
           name: 'Eugene Taktarov',
@@ -53,25 +53,40 @@ export default {
           name: 'Konstantine Kim',
           position: 'Senior Backend Developer'
         },
+        {
+          image: 'oleg.jpg',
+          name: 'Oleg Bakumenko',
+          position: 'Backend Developer'
+        },
+        {
+          image: 'vitaliy.jpg',
+          name: 'Vitaliy Galaychuk',
+          position: 'Backend Developer'
+        },
+        {
+          image: 'artyom.jpg',
+          name: 'Artyom Irza',
+          position: 'Middle Backend Developer'
+        },
         // {
         //   image: 'dima.jpg',
         //   name: 'Dmitry Surkov',
         //   position: 'Senior Fullstack Developer'
         // },
-        {
-          image: 'roman.jpg',
-          name: 'Roman Kolpakov',
-          position: 'Teamlead, Fullstack Developer'
-        },
+        // {
+        //   image: 'roman.jpg',
+        //   name: 'Roman Kolpakov',
+        //   position: 'Teamlead, Fullstack Developer'
+        // },
         {
           image: 'rita.jpg',
           name: 'Margarita Popova',
           position: 'UI/UX Lead'
         },
         {
-          image: 'artyom.jpg',
-          name: 'Artyom Irza',
-          position: 'Middle Backend Developer'
+          image: 'ivan.jpg',
+          name: 'Ivan Markov',
+          position: 'Frontend Developer'
         },
         {
           image: 'denis.jpg',
