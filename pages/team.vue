@@ -38,55 +38,40 @@ export default {
           name: 'Boris Adimov',
           position: 'CTO'
         },
-        // {
-        //   image: 'alexander.jpg',
-        //   name: 'Belokon Alexandr',
-        //   position: 'Teamlead, Fullstack Developer'
-        // },
         {
           image: 'eugene.jpg',
           name: 'Eugene Taktarov',
           position: 'Teamlead, Fullstack Developer'
         },
         {
-          image: 'konstantine.jpg',
-          name: 'Konstantine Kim',
-          position: 'Senior Backend Developer'
-        },
-        {
-          image: 'oleg.jpg',
-          name: 'Oleg Bakumenko',
-          position: 'Backend Developer'
+          image: 'sergey.jpg',
+          name: 'Sergey Paluy',
+          position: 'CMO'
         },
         {
           image: 'vitaliy.jpg',
           name: 'Vitaliy Galaychuk',
-          position: 'Backend Developer'
+          position: 'Middle Backend Developer'
         },
         {
           image: 'artyom.jpg',
           name: 'Artyom Irza',
-          position: 'Middle Backend Developer'
+          position: 'Senior Backend Developer'
         },
-        // {
-        //   image: 'dima.jpg',
-        //   name: 'Dmitry Surkov',
-        //   position: 'Senior Fullstack Developer'
-        // },
-        // {
-        //   image: 'roman.jpg',
-        //   name: 'Roman Kolpakov',
-        //   position: 'Teamlead, Fullstack Developer'
-        // },
         {
           image: 'rita.jpg',
           name: 'Margarita Popova',
           position: 'UI/UX Lead'
         },
         {
+          image: 'eugenia.jpg',
+          name: 'Evgenia Skorik',
+          position: 'Designer'
+        },
+        {
           image: 'ivan.jpg',
           name: 'Ivan Markov',
-          position: 'Frontend Developer'
+          position: 'Middle Frontend Developer'
         },
         {
           image: 'denis.jpg',
@@ -103,20 +88,25 @@ export default {
           name: 'Igor Bostan',
           position: 'Middle Backend Developer'
         },
+        // {
+        //   image: 'eugenia.jpg',
+        //   name: 'Emil Karamanov',
+        //   position: 'Middle Frontend Developer'
+        // },
+        {
+          image: 'kirill.jpg',
+          name: 'Kirill Zhaborovskiy',
+          position: 'Middle Frontend Developer'
+        },
+        {
+          image: 'dmitriy.jpg',
+          name: 'Dmitriy Nichyushkin',
+          position: 'Backend Developer'
+        },
         {
           image: 'viktor.jpg',
           name: 'Victor Ivanov',
-          position: 'Junior Frontend Developer'
-        },
-        {
-          image: 'eugenia.jpg',
-          name: 'Eugenia Skryada',
-          position: 'Junior Frontend Developer'
-        },
-        {
-          image: 'eugenia-1.jpg',
-          name: 'Evgenia Skorik',
-          position: 'Designer'
+          position: 'Frontend Developer'
         }
       ]
     }
