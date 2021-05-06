@@ -15,7 +15,7 @@
             | Services
           .text(v-for="service in project.services")
             | {{ service }}
-        .project-footer__right
+        .project-footer__right(v-if="project.live")
           .subtitle
             | Live
           a.live-link(:href="`https://${project.live}`" target="_blank")

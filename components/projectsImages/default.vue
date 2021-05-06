@@ -46,6 +46,10 @@ export default {
     margin-right: auto;
   }
 
+  .palmyra .image {
+    height: 942px;
+  }
+
   .hammer .image {
     height: 2785px;
   }

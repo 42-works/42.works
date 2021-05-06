@@ -35,6 +35,34 @@ export default [
   },
   {
     id: 2,
+    title: "Palmyra",
+    subtitle: "Full stack development",
+    sliderImages: {
+      jpg: 'palmyra.jpg',
+      webp: 'palmyra.webp'
+    },
+    name: 'palmyra',
+    imagesComponent: 'default',
+    textBlocks: [
+      {
+        title: "What",
+        text: "Palmyra is a private fund library for SVB premium partners."
+      },
+      {
+        title: "How",
+        text: "We have developed this app from scratch. Our goal was to provide excellent UX and at the same time maintain security level to the top banking standards."
+      }
+    ],
+    services: [
+      'React.js Typescript frontend development',
+      'React Admin for back office',
+      'Elixir backed',
+      'RESTful API'
+    ],
+
+  },
+  {
+    id: 3,
     title: "Mixfit",
     subtitle: "Full stack development",
     sliderImages: {
@@ -62,7 +90,7 @@ export default [
     live: "gomixfit.com"
   },
   {
-    id: 3,
+    id: 4,
     title: 'IAMIP',
     subtitle: 'Frontend development',
     sliderImages: {
@@ -88,7 +116,7 @@ export default [
     images: []
   },
   {
-    id: 4,
+    id: 5,
     title: 'Hammer for Mac',
     subtitle: 'Development',
     sliderImages: {
@@ -111,7 +139,7 @@ export default [
     images: []
   },
   {
-    id: 5,
+    id: 6,
     title: 'Forge',
     subtitle: 'Full stack development',
     sliderImages: {
@@ -134,7 +162,7 @@ export default [
     images: []
   },
   {
-    id: 6,
+    id: 7,
     title: 'Chisel',
     subtitle: 'Frontend development',
     sliderImages: {
@@ -156,7 +184,7 @@ export default [
     images: []
   },
   {
-    id: 7,
+    id: 8,
     title: 'Statebird creative',
     subtitle: 'Full stack development',
     sliderImages: {
@@ -187,7 +215,7 @@ export default [
     images: []
   },
   {
-    id: 8,
+    id: 9,
     title: 'Uptime connect',
     subtitle: 'Full stack development',
     sliderImages: {
@@ -211,7 +239,7 @@ export default [
     images: []
   },
   {
-    id: 9,
+    id: 10,
     title: 'Bitcannery',
     name: 'bitcannery',
     subtitle: 'Blockchain',
@@ -236,7 +264,7 @@ export default [
     images: []
   },
   {
-    id: 10,
+    id: 11,
     title: "Sicilia",
     subtitle: "Full stack development",
     sliderImages: {
@@ -263,4 +291,5 @@ export default [
     ],
     live: "pizza-sicilia.ru"
   },
+ 
 ]
