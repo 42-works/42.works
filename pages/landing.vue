@@ -8,22 +8,23 @@
       | Мы занимаемся решением задач бизнеса во всемирной сети интернет.
       p
       | От лендосиков до музыкальных стриминоговых платформ на блокчейне, от сайтов доставки пиццы до сервисов Банка Силикиновой Долины.
-    Slider
+    .Slider
+      Swiper
     .after-slider
       Contact
 </template>
 
 <script>
 import Header from "~/components/HeaderLanding";
-import Slider from "~/components/SliderLanding";
+import Swiper from "~/components/SliderLanding";
 import Contact from "~/components/ContactLanding";
 
 export default {
   components: {
     Header,
-    Slider,
-    Contact,
-  },
+    Swiper,
+    Contact
+  }
 };
 </script>
 

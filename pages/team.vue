@@ -18,12 +18,12 @@
 </template>
 
 <script>
-import Member from '~/components/Member'
-import Mail from '~/components/Mail'
+import Member from "~/components/Member";
+import Mail from "~/components/Mail";
 
 export default {
-  name: 'Team',
-  layout: 'item-page',
+  name: "Team",
+  layout: "item-page",
 
   components: {
     Member,
@@ -34,59 +34,59 @@ export default {
     return {
       team: [
         {
-          image: 'boris.jpg',
-          name: 'Boris Adimov',
-          position: 'CTO'
+          image: "boris.jpg",
+          name: "Boris Adimov",
+          position: "CTO"
         },
         {
-          image: 'eugene.jpg',
-          name: 'Eugene Taktarov',
-          position: 'Teamlead, Fullstack Developer'
+          image: "eugene.jpg",
+          name: "Eugene Taktarov",
+          position: "Teamlead, Fullstack Developer"
         },
         {
-          image: 'sergey.jpg',
-          name: 'Sergey Paluy',
-          position: 'CMO'
+          image: "sergey.jpg",
+          name: "Sergey Paluy",
+          position: "CMO"
         },
         {
-          image: 'vitaliy.jpg',
-          name: 'Vitaliy Galaychuk',
-          position: 'Middle Backend Developer'
+          image: "vitaliy.jpg",
+          name: "Vitaliy Galaychuk",
+          position: "Middle Backend Developer"
         },
         {
-          image: 'artyom.jpg',
-          name: 'Artyom Irza',
-          position: 'Senior Backend Developer'
+          image: "artyom.jpg",
+          name: "Artyom Irza",
+          position: "Senior Backend Developer"
         },
         {
-          image: 'rita.jpg',
-          name: 'Margarita Popova',
-          position: 'UI/UX Lead'
+          image: "rita.jpg",
+          name: "Margarita Popova",
+          position: "UI/UX Lead"
         },
         {
-          image: 'eugenia.jpg',
-          name: 'Evgenia Skorik',
-          position: 'Designer'
+          image: "eugenia.jpg",
+          name: "Evgenia Skorik",
+          position: "Designer"
         },
         {
-          image: 'ivan.jpg',
-          name: 'Ivan Markov',
-          position: 'Middle Frontend Developer'
+          image: "ivan.jpg",
+          name: "Ivan Markov",
+          position: "Middle Frontend Developer"
         },
         {
-          image: 'denis.jpg',
-          name: 'Denis Pelevin',
-          position: 'Middle Frontend Developer'
+          image: "denis.jpg",
+          name: "Denis Pelevin",
+          position: "Middle Frontend Developer"
         },
         {
-          image: 'arseniy.jpg',
-          name: 'Arseniy Adimov',
-          position: 'Middle Backend Developer'
+          image: "arseniy.jpg",
+          name: "Arseniy Adimov",
+          position: "Middle Backend Developer"
         },
         {
-          image: 'igor.jpg',
-          name: 'Igor Bostan',
-          position: 'Middle Backend Developer'
+          image: "igor.jpg",
+          name: "Igor Bostan",
+          position: "Middle Backend Developer"
         },
         // {
         //   image: 'eugenia.jpg',
@@ -94,115 +94,115 @@ export default {
         //   position: 'Middle Frontend Developer'
         // },
         {
-          image: 'kirill.jpg',
-          name: 'Kirill Zhaborovskiy',
-          position: 'Middle Frontend Developer'
+          image: "kirill.jpg",
+          name: "Kirill Zhaborovskiy",
+          position: "Middle Frontend Developer"
         },
         {
-          image: 'dmitriy.jpg',
-          name: 'Dmitriy Nichyushkin',
-          position: 'Backend Developer'
+          image: "dmitriy.jpg",
+          name: "Dmitriy Nichyushkin",
+          position: "Backend Developer"
         },
         {
-          image: 'viktor.jpg',
-          name: 'Victor Ivanov',
-          position: 'Frontend Developer'
+          image: "viktor.jpg",
+          name: "Victor Ivanov",
+          position: "Frontend Developer"
         }
       ]
-    }
+    };
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
-  .content {
-    padding-top: 200px;
-  }
+.content {
+  padding-top: 200px;
+}
 
-  .team-block {
-    padding-bottom: 100px;
-    border-bottom: 0.5px solid #DBDBDB;
-  }
+.team-block {
+  padding-bottom: 100px;
+  border-bottom: 0.5px solid #dbdbdb;
+}
 
-  .title {
-    margin-bottom: 20px;
-    font-size: 40px;
-    line-height: 56px;
-    color: #000000;
-  }
+.title {
+  margin-bottom: 20px;
+  font-size: 40px;
+  line-height: 56px;
+  color: #000000;
+}
 
-  .text {
-    font-size: 21px;
-    line-height: 40px;
-    letter-spacing: 0.01em;
-    color: rgba(0, 1, 5, 0.6);
-    font-weight: lighter;
-  }
+.text {
+  font-size: 21px;
+  line-height: 40px;
+  letter-spacing: 0.01em;
+  color: rgba(0, 1, 5, 0.6);
+  font-weight: lighter;
+}
 
-  .team-list {
-    padding-top: 94px;
+.team-list {
+  padding-top: 94px;
+}
+
+.team-list ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  width: 100%;
+}
+
+.team-container {
+  padding-right: 198px;
+}
+
+.team-member {
+  display: inline-block;
+  margin-bottom: 55px;
+}
+
+@media (max-width: 1024px) {
+  .team-container {
+    padding-left: 24px;
+    padding-right: 24px;
   }
 
   .team-list ul {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
-    width: 100%;
+@media (max-width: 768px) {
+  .content {
+    padding-top: 60px;
   }
 
-  .team-container {
-    padding-right: 198px;
+  .team-block {
+    padding-bottom: 60px;
   }
 
-  .team-member {
-    display: inline-block;
-    margin-bottom: 55px;
+  .team-list {
+    padding-top: 60px;
+    margin-bottom: 60px;
   }
 
-  @media (max-width: 1024px) {
-    .team-container {
-      padding-left: 24px;
-      padding-right: 24px;
-    }
-
-    .team-list ul {
-      grid-template-columns: repeat(2, 1fr);
-    }
+  .team-list ul {
+    justify-content: space-around;
   }
 
-  @media (max-width: 768px) {
-    .content {
-      padding-top: 60px;
-    }
-
-    .team-block {
-      padding-bottom: 60px;
-    }
-
-    .team-list {
-      padding-top: 60px;
-      margin-bottom: 60px;
-    }
-
-    .team-list ul {
-      justify-content: space-around;
-    }
-
-    .title {
-      margin-bottom: 16px;
-      font-size: 31px;
-      line-height: 46px;
-    }
-
-    .text {
-      font-size: 18px;
-      line-height: 32px;
-    }
+  .title {
+    margin-bottom: 16px;
+    font-size: 31px;
+    line-height: 46px;
   }
 
-  @media (max-width: 560px) {
-    .team-list ul {
-      grid-template-columns: repeat(1, 1fr);
-    }
+  .text {
+    font-size: 18px;
+    line-height: 32px;
   }
+}
+
+@media (max-width: 560px) {
+  .team-list ul {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 </style>
