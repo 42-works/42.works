@@ -63,7 +63,7 @@ export default {
     },
 
     checkFormIsFull() {
-      this.formIsFull = Object.keys(this.fields).some(key => {
+      this.formIsFull = Object.keys(this.fields).every(key => {
         return this[key]
       })
     },
