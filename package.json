@@ -25,6 +25,7 @@
   "devDependencies": {
     "@nuxtjs/style-resources": "^0.1.2",
     "css-loader": "^3.4.2",
+    "eslint-plugin-only-warn": "^1.0.2",
     "node-sass": "^4.13.1",
     "nodemon": "^2.0.2",
     "pug": "^2.0.4",
@@ -34,3 +35,5 @@
     "vue-svg-loader": "^0.12.0"
   }
 }
+
+  
