@@ -1,56 +1,55 @@
 <template lang="pug">
-.contact
-  .form-title
-    | Расскажи о себе
-  form.form(@submit="submitForm")
-    .input-wrapper
-      label.label
-        | Как тебя зовут?
+form.form(@submit="submitForm")
+  .input-wrapper
+    label.label
+      | Как тебя зовут?
+    input.form__input(
+      type="text",
+      placeholder="Name",
+      name="name",
+      v-model="name",
+      v-validate="'required'",
+      :class="{ 'is-danger': errors.has('name') }",
+      @input="checkFormIsFull"
+    )
+    span.help.is-danger(v-show="errors.has('name')") {{ errors.first('name') }}
+  .input-wrapper
+    label.label
+      | Предпочитаемый способ связи
       input.form__input(
         type="text",
-        placeholder="Name",
-        name="name",
-        v-model="name",
+        placeholder="Telegram, e-mail or something",
+        name="contact",
+        v-model="contact",
         v-validate="'required'",
-        :class="{ 'is-danger': errors.has('name') }",
+        :class="{ 'is-danger': errors.has('contact') }",
         @input="checkFormIsFull"
       )
-      span.help.is-danger(v-show="errors.has('name')") {{ errors.first('name') }}
-    .input-wrapper
+    span.help.is-danger(v-show="errors.has('contact')") {{ errors.first('contact') }}
+  .input-wrapper
+    .input-wrapper__textarea
       label.label
-        | Предпочитаемый способ связи
-        input.form__input(
-          type="text",
-          placeholder="Telegram, e-mail or something",
-          name="contact",
-          v-model="contact",
-          v-validate="'required'",
-          :class="{ 'is-danger': errors.has('contact') }",
-          @input="checkFormIsFull"
-        )
-      span.help.is-danger(v-show="errors.has('contact')") {{ errors.first('contact') }}
-    .input-wrapper
-      .input-wrapper__textarea
-        label.label
-          | Чем тебе интересно заниматься и какой у тебя опыт работы?
-        textarea.form__input.form__input--textarea(
-          name="message",
-          placeholder="Your message",
-          v-model="message",
-          v-validate="'required'",
-          :class="{ 'is-danger': errors.has('message') }",
-          @input="checkFormIsFull"
-        )
-        span.help.is-danger(v-show="errors.has('message')") {{ errors.first('message') }}
-    .button-wrapper
-      button.form__button(
-        :class="{ disable: isButtonDisabled() }",
-        @click="submitForm"
-      ) Send message
+        | Чем тебе интересно заниматься и какой у тебя опыт работы?
+      textarea.form__input.form__input--textarea(
+        name="message",
+        placeholder="Your message",
+        v-model="message",
+        v-validate="'required'",
+        :class="{ 'is-danger': errors.has('message') }",
+        @input="checkFormIsFull"
+      )
+      span.help.is-danger(v-show="errors.has('message')") {{ errors.first('message') }}
+  .button-wrapper
+    Button(@click="submitForm", :disabled="isButtonDisabled()")
 </template>
 
 <script>
+import Button from "./Button";
+
 export default {
+  components: {
+    Button,
+  },
   data() {
     return {
       formIsFull: false,
@@ -142,7 +141,7 @@ export default {
   line-height: 56px;
   text-align: center;
   letter-spacing: 0.01em;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .form {
   &__input {
@@ -168,61 +167,30 @@ export default {
     display: flex;
     justify-content: center;
   }
-  &__button {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    height: 48px;
-    width: 184px;
-    padding-bottom: 4px;
-    padding-left: 0;
-    padding-right: 0;
-
-    line-height: 39px;
-    font-size: 21px;
-    text-align: center;
-    letter-spacing: 0.02em;
+  .button-wrapper ::v-deep .button {
+    height: 56px;
+    width: 157px;
 
     color: #ffffff;
     border: 2px solid $white;
     background-color: $black;
-    cursor: pointer;
-    box-sizing: border-box;
-
-    transition: 0.2s;
-
-    &:before,
-    &:after {
-      content: "";
-      position: absolute;
-      z-index: -1;
-    }
 
     &:before {
-      z-index: 10;
-      bottom: -10px;
-      left: -2px;
-      width: 192px;
+      width: 165px;
       height: 8px;
       border-top: 8px solid $white;
-      border-bottom: none;
       border-left: 8px solid $black;
-      box-sizing: border-box;
-      transition: border-top 0.2s;
     }
 
     &:after {
-      z-index: 10;
-      top: -2px;
-      right: -10px;
-      height: 49px;
+      height: 63px;
       width: 8px;
       border-left: 8px solid $white;
-      border-bottom: none;
       border-top: 8px solid $black;
-      transition: border-left 0.2s;
+    }
+
+    &:hover {
+      background-color: #3431dc;
     }
 
     &:active {
@@ -257,19 +225,6 @@ export default {
     }
     &__textarea {
       margin-bottom: 29px;
-    }
-  }
-  .disable {
-    pointer-events: none;
-    border-color: $grayDark;
-    color: $grayDark;
-
-    &::after {
-      border-left-color: $grayDark;
-    }
-
-    &::before {
-      border-top-color: $grayDark;
     }
   }
   .is-danger {
