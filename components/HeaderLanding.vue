@@ -17,8 +17,8 @@
         | это студия разработки 42:/>
       .text-header
         | Нам нужны твои мозги.
-      .button-header 
-        Button(@click="scrollTo", :title="'Рассказать о себе'") 
+      .button-header
+        Button(@click="scrollTo", :title="'Рассказать о себе'")
     .logo
       .logo-image(ref="logo")
         Logo
@@ -213,14 +213,14 @@ export default {
     width: 236px;
     height: 8px;
     border-top: 8px solid $white;
-    border-left: 8px solid $black;
+    border-left: 8px solid transparent;
   }
 
   &:after {
     height: 55px;
     width: 8px;
     border-left: 8px solid $white;
-    border-top: 8px solid $black;
+    border-top: 8px solid transparent;
   }
 
   &:hover {

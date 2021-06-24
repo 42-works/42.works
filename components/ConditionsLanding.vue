@@ -4,33 +4,27 @@
       | Наш стек
     .image-list
       .image-item
-        .icon
-          img(:src="require(`../assets/images/landing/react.svg`)")
+        img.icon(:src="require(`../assets/images/landing/react.svg`)")
         .icon-text
           | React
       .image-item
-        .icon
-          img(:src="require(`../assets/images/landing/vue.svg`)")
+        img.icon(:src="require(`../assets/images/landing/vue.svg`)")
         .icon-text
           | Vue
       .image-item
-        .icon
-          img(:src="require(`../assets/images/landing/ruby.svg`)")
+        img.icon(:src="require(`../assets/images/landing/ruby.svg`)")
         .icon-text
           | Ruby
       .image-item
-        .icon
-          img(:src="require(`../assets/images/landing/elixir.svg`)")
+        img.icon(:src="require(`../assets/images/landing/elixir.svg`)")
         .icon-text
           | Elixir
       .image-item
-        .icon
-          img(:src="require(`../assets/images/landing/node.png`)")
+        img.icon(:src="require(`../assets/images/landing/node.png`)")
         .icon-text
           | Node
       .image-item
-        .icon
-          img(:src="require(`../assets/images/landing/solidity.svg`)")
+        img.icon(:src="require(`../assets/images/landing/solidity.svg`)")
         .icon-text
           | Solidity
     .text.text-after-stack

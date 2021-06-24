@@ -11,13 +11,12 @@
       | Мы занимаемся решением задач бизнеса во всемирной сети интернет.
       p
       | От лендосиков до музыкальных стриминоговых платформ на блокчейне, от сайтов доставки пиццы до сервисов Банка Силикиновой Долины.
-    .Slider
+    .slider
       Swiper
-    .Conditions
+    .conditions
       Conditions
-    .after-slider
-      .contact(:ref="'contact'")
-        Contact
+    .contact(:ref="'contact'")
+      Contact
 </template>
 
 <script>
@@ -93,14 +92,14 @@ export default {
   max-width: 579px;
   margin: 100px auto 0 auto;
 }
-.Slider {
+.slider {
   margin-top: 107px;
 }
 .conditions {
   max-width: 710px;
   margin: 160px auto 0 auto;
 }
-.Contact {
+.contact {
   max-width: 710px;
   margin: 24px auto 0 auto;
   padding-bottom: 90px;
