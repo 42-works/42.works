@@ -14,7 +14,8 @@
     .Conditions
       Conditions
     .after-slider
-      Contact
+      .contact(:ref="'contact'")
+        Contact
 </template>
 
 <script>
@@ -34,7 +35,7 @@ export default {
     Tetris,
     Slider,
     Contact,
-    Conditions
+    Conditions,
   },
 
   data() {
