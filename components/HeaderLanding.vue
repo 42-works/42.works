@@ -17,7 +17,8 @@
         | это студия разработки 42:/>
       .text-header
         | Нам нужны твои мозги.
-      button.header-button Рассказать о себе
+      .button-header 
+        Button(@click="scrollTo", :title="'Рассказать о себе'") 
     .logo
       .logo-image(ref="logo")
         Logo
@@ -28,11 +29,13 @@
 <script>
 import Logo from "../assets/images/logo-main.svg?inline";
 import LogoShadow from "../assets/images/landing/logo-main-shadow.svg?inline";
+import Button from "~/components/Button";
 
 export default {
   components: {
     Logo,
     LogoShadow,
+    Button,
   },
 
   data() {
@@ -49,17 +52,17 @@ export default {
   },
 
   mounted() {
-      if (process.browser) {
-        window.addEventListener("resize", this.onResize);
-        this.onResize();
-        this.setStartParalaxCenter();
-      }
-    },
+    if (process.browser) {
+      window.addEventListener("resize", this.onResize);
+      this.onResize();
+      this.setStartParalaxCenter();
+    }
+  },
 
-    beforeDestroy() {
-      this.$refs.header.removeEventListener("mousemove", this.mouseMove);
-      window.removeEventListener("resize", this.onResize);
-    },
+  beforeDestroy() {
+    this.$refs.header.removeEventListener("mousemove", this.mouseMove);
+    window.removeEventListener("resize", this.onResize);
+  },
 
   methods: {
     onResize() {
@@ -108,7 +111,13 @@ export default {
       this.$refs.logoShadow.style.left =
         this.getOffset(this.mouse.X - this.paralaxCenter.X) + "px";
     },
-  }
+    scrollTo() {
+      this.$parent.$refs.contact.scrollIntoView({
+        behavior: "smooth",
+        alignToTop: true,
+      });
+    },
+  },
 };
 </script>
 
@@ -189,5 +198,55 @@ export default {
 
 .logo-shadow svg {
   width: 445px;
+}
+
+.button-header {
+  margin-top: 20px;
+}
+
+.button-header ::v-deep .button {
+  height: 47px;
+  width: 236px;
+
+  color: #ffffff;
+  border: 2px solid $white;
+  background-color: $black;
+
+  &:before {
+    width: 236px;
+    height: 8px;
+    border-top: 8px solid $white;
+    border-left: 8px solid $black;
+  }
+
+  &:after {
+    height: 55px;
+    width: 8px;
+    border-left: 8px solid $white;
+    border-top: 8px solid $black;
+  }
+
+  &:hover {
+    background-color: #3431dc;
+  }
+
+  &:active {
+    top: 8px;
+    left: 8px;
+    &:before {
+      bottom: 0;
+      left: 0;
+      width: 0;
+      border-left: none;
+      border-top: none;
+    }
+    &:after {
+      right: 0;
+      top: 0;
+      height: 0;
+      border-left: none;
+      border-top: none;
+    }
+  }
 }
 </style>
