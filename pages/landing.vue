@@ -34,7 +34,7 @@ export default {
     Tetris,
     Slider,
     Contact,
-    Conditions
+    Conditions,
   },
 
   data() {

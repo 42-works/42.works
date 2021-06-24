@@ -43,14 +43,16 @@
         )
         span.help.is-danger(v-show="errors.has('message')") {{ errors.first('message') }}
     .button-wrapper
-      button.form__button(
-        :class="{ disable: isButtonDisabled() }",
-        @click="submitForm"
-      ) Send message
+      Button(@click="submitForm", :disabled="isButtonDisabled()")
 </template>
 
 <script>
+import Button from "./Button";
+
 export default {
+  components: {
+    Button,
+  },
   data() {
     return {
       formIsFull: false,
@@ -168,61 +170,30 @@ export default {
     display: flex;
     justify-content: center;
   }
-  &__button {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    height: 48px;
-    width: 184px;
-    padding-bottom: 4px;
-    padding-left: 0;
-    padding-right: 0;
-
-    line-height: 39px;
-    font-size: 21px;
-    text-align: center;
-    letter-spacing: 0.02em;
+  .button-wrapper ::v-deep .button {
+    height: 56px;
+    width: 157px;
 
     color: #ffffff;
     border: 2px solid $white;
     background-color: $black;
-    cursor: pointer;
-    box-sizing: border-box;
-
-    transition: 0.2s;
-
-    &:before,
-    &:after {
-      content: "";
-      position: absolute;
-      z-index: -1;
-    }
 
     &:before {
-      z-index: 10;
-      bottom: -10px;
-      left: -2px;
-      width: 192px;
+      width: 165px;
       height: 8px;
       border-top: 8px solid $white;
-      border-bottom: none;
       border-left: 8px solid $black;
-      box-sizing: border-box;
-      transition: border-top 0.2s;
     }
 
     &:after {
-      z-index: 10;
-      top: -2px;
-      right: -10px;
-      height: 49px;
+      height: 63px;
       width: 8px;
       border-left: 8px solid $white;
-      border-bottom: none;
       border-top: 8px solid $black;
-      transition: border-left 0.2s;
+    }
+
+    &:hover {
+      background-color: #3431dc;
     }
 
     &:active {
@@ -257,19 +228,6 @@ export default {
     }
     &__textarea {
       margin-bottom: 29px;
-    }
-  }
-  .disable {
-    pointer-events: none;
-    border-color: $grayDark;
-    color: $grayDark;
-
-    &::after {
-      border-left-color: $grayDark;
-    }
-
-    &::before {
-      border-top-color: $grayDark;
     }
   }
   .is-danger {
