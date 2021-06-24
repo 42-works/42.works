@@ -1,5 +1,7 @@
 <template lang="pug">
 .contact
+  .form-title
+    | Расскажи о себе
   form.form(@submit="submitForm")
     .input-wrapper
       label.label
@@ -134,6 +136,14 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.form-title {
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 56px;
+  text-align: center;
+  letter-spacing: 0.01em;
+  color: #FFFFFF;
+}
 .form {
   &__input {
     height: 60px;

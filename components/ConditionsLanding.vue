@@ -1,7 +1,8 @@
 <template lang="pug">
   .conditions
     .main-image
-      img(src="../assets/images/eugen.png" alt="main-img")
+      Star
+      img(src="../assets/images/eugen.png" class="eugen-img" alt="main-img")
     p.text
       | Сейчас мы проводим небольшой набор в команду с максимально гибкими условиями:  
     .text_wrapper
@@ -9,20 +10,29 @@
         .title
           | Парт тайм
         .description
-          |  для тех, кто еще учится и хочет познакомиться с индустрией     
+          |  для тех, кто еще учится и хочет познакомиться с индустрией  
+      .text-item.line
       .text-item
         .title
           | Фулл тайм
         .description
           |  для тех, кто решил не писать диплом и уже имеет опыт работы.  
     p.text
-      |  Если тебе интересны веб технологии и кроссплатформенная мобильная разработка – пиши     
+      |  Если тебе интересны веб технологии и кроссплатформенная мобильная разработка – пиши  
+    .eye  
+      Eye     
 </template>
 
 <script>
-export default {
+import Star from '~/assets/images/star.svg?inline'
+import Eye from '~/assets/images/eye.svg?inline'
 
-}
+export default {
+  components: {
+    Star,
+    Eye
+  },
+}  
 </script>
 
 <style lang="scss">
@@ -59,5 +69,30 @@ export default {
   }
   .text-item {
     max-width: 253px;
+  }
+
+  .text-item.line {
+    content: '';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 0px;
+    height: 58px;
+    border: 1px solid #A1A1A1;
+  }
+
+  .main-image {
+    position: relative;
+    .eugen-img {
+      position: absolute;
+      top: 18.8%;
+      right: 14.5%;
+    }
+  }
+  .eye {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 88px;
   }
 </style>

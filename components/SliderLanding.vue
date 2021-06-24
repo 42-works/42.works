@@ -42,13 +42,9 @@ export default {
       swiperOption: {
         slidesPerView: 3,
         spaceBetween: 30,
-        slidesPerGroup: 3,
+        slidesPerGroup: 1,
         loop: true,
         loopFillGroupWithBlank: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true
-        },
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev"
@@ -90,7 +86,7 @@ export default {
   .slide-img {
     width: 100%;
     margin-top: 28px;
-    transition: 0.1s;
+    transition: 0.2s;
     z-index: 100;
     &:hover {
       width: 115.9%;
