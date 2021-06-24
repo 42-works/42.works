@@ -1,5 +1,5 @@
 <template lang="pug">
-button.button(:class="className") {{ title }}
+  button.button(@click="click", :class="className") {{ title }}
 </template>
 
 <script>
@@ -21,6 +21,11 @@ export default {
       };
     },
   },
+  methods: {
+    click(){
+      this.$emit('click')
+    }
+  }
 };
 </script>
 

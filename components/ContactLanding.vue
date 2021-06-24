@@ -1,49 +1,46 @@
 <template lang="pug">
-.contact
-  .form-title
-    | Расскажи о себе
-  form.form(@submit="submitForm")
-    .input-wrapper
-      label.label
-        | Как тебя зовут?
+form.form(@submit="submitForm")
+  .input-wrapper
+    label.label
+      | Как тебя зовут?
+    input.form__input(
+      type="text",
+      placeholder="Name",
+      name="name",
+      v-model="name",
+      v-validate="'required'",
+      :class="{ 'is-danger': errors.has('name') }",
+      @input="checkFormIsFull"
+    )
+    span.help.is-danger(v-show="errors.has('name')") {{ errors.first('name') }}
+  .input-wrapper
+    label.label
+      | Предпочитаемый способ связи
       input.form__input(
         type="text",
-        placeholder="Name",
-        name="name",
-        v-model="name",
+        placeholder="Telegram, e-mail or something",
+        name="contact",
+        v-model="contact",
         v-validate="'required'",
-        :class="{ 'is-danger': errors.has('name') }",
+        :class="{ 'is-danger': errors.has('contact') }",
         @input="checkFormIsFull"
       )
-      span.help.is-danger(v-show="errors.has('name')") {{ errors.first('name') }}
-    .input-wrapper
+    span.help.is-danger(v-show="errors.has('contact')") {{ errors.first('contact') }}
+  .input-wrapper
+    .input-wrapper__textarea
       label.label
-        | Предпочитаемый способ связи
-        input.form__input(
-          type="text",
-          placeholder="Telegram, e-mail or something",
-          name="contact",
-          v-model="contact",
-          v-validate="'required'",
-          :class="{ 'is-danger': errors.has('contact') }",
-          @input="checkFormIsFull"
-        )
-      span.help.is-danger(v-show="errors.has('contact')") {{ errors.first('contact') }}
-    .input-wrapper
-      .input-wrapper__textarea
-        label.label
-          | Чем тебе интересно заниматься и какой у тебя опыт работы?
-        textarea.form__input.form__input--textarea(
-          name="message",
-          placeholder="Your message",
-          v-model="message",
-          v-validate="'required'",
-          :class="{ 'is-danger': errors.has('message') }",
-          @input="checkFormIsFull"
-        )
-        span.help.is-danger(v-show="errors.has('message')") {{ errors.first('message') }}
-    .button-wrapper
-      Button(@click="submitForm", :disabled="isButtonDisabled()")
+        | Чем тебе интересно заниматься и какой у тебя опыт работы?
+      textarea.form__input.form__input--textarea(
+        name="message",
+        placeholder="Your message",
+        v-model="message",
+        v-validate="'required'",
+        :class="{ 'is-danger': errors.has('message') }",
+        @input="checkFormIsFull"
+      )
+      span.help.is-danger(v-show="errors.has('message')") {{ errors.first('message') }}
+  .button-wrapper
+    Button(@click="submitForm", :disabled="isButtonDisabled()")
 </template>
 
 <script>
@@ -144,7 +141,7 @@ export default {
   line-height: 56px;
   text-align: center;
   letter-spacing: 0.01em;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .form {
   &__input {

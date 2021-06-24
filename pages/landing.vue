@@ -14,7 +14,8 @@
     .Conditions
       Conditions
     .after-slider
-      Contact
+      .contact(:ref="'contact'")
+        Contact
 </template>
 
 <script>
@@ -87,6 +88,12 @@ export default {
     touchMoveHandler(e) {
       this.touchEnd = e.changedTouches[0].clientY;
       document.documentElement.style.backgroundColor = "#151515";
+    },
+    scrollTo() {
+      this.$refs.contact.scrollIntoView({
+        behavior: "smooth",
+        alignToTop: true,
+      });
     },
   },
 };
