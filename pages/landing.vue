@@ -33,6 +33,8 @@
       | От лендосиков до музыкальных стриминоговых платформ на блокчейне, от сайтов доставки пиццы до сервисов Банка Силикиновой Долины.
     .Slider
       Swiper
+    .Conditions
+      Conditions  
     .after-slider
       Contact
 </template>
@@ -44,6 +46,7 @@ import Logo from "~/assets/images/logo-main.svg?inline";
 import LogoShadow from "~/assets/images/landing/logo-main-shadow.svg?inline";
 import Slider from "~/components/SliderLanding";
 import Contact from "~/components/ContactLanding";
+import Conditions from "~/components/ConditionsLanding";
 
 
 import Tetris from "~/components/Tetris";
@@ -58,6 +61,7 @@ export default {
     Tetris,
     Slider,
     Contact,
+    Conditions
   }
 ,
   
@@ -261,8 +265,13 @@ export default {
 
 .logo-shadow svg {
   width: 445px;
+   
 }
 
+.conditions {
+  max-width: 710px;
+  margin: 108px auto;
+}
 .before-slider {
   max-width: 579px;
   margin: 108px auto;
