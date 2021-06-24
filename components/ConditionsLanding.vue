@@ -1,26 +1,61 @@
 <template lang="pug">
   .conditions
+    .top-title
+      | Наш стек
+    .image-list
+      .image-item
+        .icon
+          img(:src="require(`../assets/images/landing/react.svg`)")
+        .icon-text
+          | React
+      .image-item
+        .icon
+          img(:src="require(`../assets/images/landing/vue.svg`)")
+        .icon-text
+          | Vue
+      .image-item
+        .icon
+          img(:src="require(`../assets/images/landing/ruby.svg`)")
+        .icon-text
+          | Ruby
+      .image-item
+        .icon
+          img(:src="require(`../assets/images/landing/elixir.svg`)")
+        .icon-text
+          | Elixir
+      .image-item
+        .icon
+          img(:src="require(`../assets/images/landing/node.png`)")
+        .icon-text
+          | Node
+      .image-item
+        .icon
+          img(:src="require(`../assets/images/landing/solidity.svg`)")
+        .icon-text
+          | Solidity
+    .text.text-after-stack
+      | Мы используем последние технологии, и не засиживаемся в фабриках фабрик энтерпрайз легаси. Работаем по принципу "клиент не всегда прав", культивируем здоровую культуру труда и делимся нашим опытом с локальным комьюнити.
     .main-image
       Star
       img(src="../assets/images/eugen.png" class="eugen-img" alt="main-img")
-    p.text
-      | Сейчас мы проводим небольшой набор в команду с максимально гибкими условиями:  
+    .text.text-after-photo
+      | Сейчас мы проводим небольшой набор в команду с максимально гибкими условиями:
     .text_wrapper
       .text-item
         .title
           | Парт тайм
         .description
-          |  для тех, кто еще учится и хочет познакомиться с индустрией  
+          |  для тех, кто еще учится и хочет познакомиться с индустрией
       .text-item.line
       .text-item
         .title
           | Фулл тайм
         .description
-          |  для тех, кто решил не писать диплом и уже имеет опыт работы.  
-    p.text
-      |  Если тебе интересны веб технологии и кроссплатформенная мобильная разработка – пиши  
-    .eye  
-      Eye     
+          |  для тех, кто решил не писать диплом и уже имеет опыт работы.
+    .text.text-after-item
+      |  Если тебе интересны веб технологии и кроссплатформенная мобильная разработка – пиши
+    .eye
+      Eye
 </template>
 
 <script>
@@ -32,31 +67,67 @@ export default {
     Star,
     Eye
   },
-}  
+}
 </script>
 
 <style lang="scss">
+  .top-title {
+    font-size: 32px;
+    line-height: 44px;
+    letter-spacing: 0.01em;
+    text-align: center;
+  }
+  .image-list {
+    display: flex;
+    margin-top: 55px;
+  }
+  .image-item {
+    display: flex;
+    flex-direction: column;
+  }
+  .icon {
+    margin: 0 20px;
+  }
+  .icon-text {
+    margin-top: 30px;
+    font-size: 13px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: rgba(255, 255, 255, 0.5);
+  }
   .text {
-    max-width: 384px;
     font-weight: normal;
     font-size: 16px;
     line-height: 170%;
     text-align: center;
     letter-spacing: 0.01em;
-    color: #FFFFFF;
-    margin: 37px auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .text-after-stack {
+    max-width: 720px;
+    margin-top: 60px;
+  }
+  .text-after-photo {
+    max-width: 384px;
+    margin-top: 88px;
+  }
+  .text-after-item {
+    max-width: 447px;
+    margin-top: 57px;
   }
   .text_wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
     text-align: center;
+    margin-top: 37px;
     .title {
       font-weight: normal;
       font-size: 24px;
       line-height: 170%;
       letter-spacing: 0.01em;
-      color: #FFFFFF;
     }
     .description {
       font-weight: 300;
@@ -83,6 +154,7 @@ export default {
 
   .main-image {
     position: relative;
+    margin-top: 60px;
     .eugen-img {
       position: absolute;
       top: 18.8%;

@@ -31,10 +31,10 @@
 }
 
 @font-face {
-  font-family: "noto-sans";
+  font-family: noto-sans;
   src: url("~static/fonts/NotoSansJP-Light.woff2") format("woff2"),
     url("~static/fonts/NotoSansJP-Light.woff") format("woff"),
-    url("~static/fonts/NotoSansJP-Light.eot?#iefix") format("embedded-opentype"),
+    url("~static/fonts/NotoSansJP-Light.eot") format("embedded-opentype"),
     url("~static/fonts/NotoSansJP-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
@@ -42,11 +42,10 @@
 }
 
 @font-face {
-  font-family: "noto-sans";
+  font-family: noto-sans;
   src: url("~static/fonts/NotoSansJP-Regular.woff2") format("woff2"),
     url("~static/fonts/NotoSansJP-Regular.woff") format("woff"),
-    url("~static/fonts/NotoSansJP-Regular.eot?#iefix")
-      format("embedded-opentype"),
+    url("~static/fonts/NotoSansJP-Regular.eot") format("embedded-opentype"),
     url("~static/fonts/NotoSansJP-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
@@ -54,11 +53,10 @@
 }
 
 @font-face {
-  font-family: "noto-sans";
+  font-family: noto-sans;
   src: url("~static/fonts/NotoSansJP-Medium.woff2") format("woff2"),
     url("~static/fonts/NotoSansJP-Medium.woff") format("woff"),
-    url("~static/fonts/NotoSansJP-Medium.eot?#iefix")
-      format("embedded-opentype"),
+    url("~static/fonts/NotoSansJP-Medium.eot") format("embedded-opentype"),
     url("~static/fonts/NotoSansJP-Medium.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;

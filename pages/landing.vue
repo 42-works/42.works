@@ -4,6 +4,8 @@
   .header
     Header
   .content
+    img.bg(:src="require(`../assets/images/landing/bg-top.svg`)")
+    img.bg.bg-bottom(:src="require(`../assets/images/landing/bg-bottom.svg`)")
     .before-slider.text
       p
       | Мы занимаемся решением задач бизнеса во всемирной сети интернет.
@@ -13,7 +15,7 @@
       Swiper
     .Conditions
       Conditions
-    .after-slider
+    .Contact
       Contact
 </template>
 
@@ -46,10 +48,8 @@ export default {
   },
 
   mounted() {
-    window.addEventListener("mousewheel", this.wheelHandler);
     window.addEventListener("touchstart", this.touchStartHandler);
     window.addEventListener("touchend", this.touchEndHandler);
-    window.addEventListener("touchmove", this.touchMoveHandler);
 
     if (process.browser) {
       window.addEventListener("resize", this.onResize);
@@ -58,11 +58,9 @@ export default {
   },
 
   beforeDestroy() {
-    window.removeEventListener("mousewheel", this.wheelHandler);
     window.removeEventListener("resize", this.onResize);
     window.removeEventListener("touchstart", this.touchStartHandler);
     window.removeEventListener("touchend", this.touchEndHandler);
-    window.removeEventListener("touchmove", this.touchMoveHandler);
 
     document.documentElement.style.backgroundColor = "";
   },
@@ -76,54 +74,51 @@ export default {
       }
     },
 
-    wheelHandler(e) {
-      document.documentElement.style.backgroundColor = "#151515";
-    },
-
     touchStartHandler(e) {
       this.touchStart = e.touches[0].clientY;
-    },
-
-    touchMoveHandler(e) {
-      this.touchEnd = e.changedTouches[0].clientY;
-      document.documentElement.style.backgroundColor = "#151515";
     },
   },
 };
 </script>
 
 <style lang="scss" scoped>
-// .landing {
-//   font-family: "noto-sans";
-//   position: relative;
-//   background-color: #151515;
-//   color: #ffffff;
-// }
-
 .header {
   max-width: 1075px;
+  height: 589px;
   margin: 0 auto;
   padding: 40px 16px 0;
 }
-
-.conditions {
-  max-width: 710px;
-  margin: 108px auto;
-}
 .before-slider {
   max-width: 579px;
-  margin: 108px auto;
+  margin: 100px auto 0 auto;
 }
-
-.after-slider {
+.Slider {
+  margin-top: 107px;
+}
+.conditions {
   max-width: 710px;
-  margin: 108px auto;
+  margin: 160px auto 0 auto;
+}
+.Contact {
+  max-width: 710px;
+  margin: 24px auto 0 auto;
+  padding-bottom: 90px;
+}
+.bg {
+  max-width: 100%;
+  width: 100%;
+}
+.bg-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 </style>
 
 <style lang="scss">
 .landing {
-  font-family: noto-sans;
+  font-family: noto-sans, monospace;
   font-weight: 300;
   font-style: normal;
   position: relative;

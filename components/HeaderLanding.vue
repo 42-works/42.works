@@ -7,7 +7,7 @@
       | +7 (999) 696-65-50
     .text-contact
       | telegram
-    .image.telegram-icon
+    .telegram-icon
       img(:src="require(`../assets/images/landing/telegram.svg`)")
   .header-content
     .header-info
@@ -132,12 +132,9 @@ export default {
   letter-spacing: 0.01em;
 }
 
-.image img {
+.telegram-icon img {
   width: 100%;
   display: block;
-}
-
-.telegram-icon {
   margin-left: 16px;
   width: 20px;
 }
