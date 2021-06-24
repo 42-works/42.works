@@ -1,5 +1,5 @@
 <template lang="pug">
-form.form(@submit="submitForm")
+form.form(@submit.prevent="submitForm")
   .input-wrapper
     label.label
       | Как тебя зовут?
@@ -40,7 +40,7 @@ form.form(@submit="submitForm")
       )
       span.help.is-danger(v-show="errors.has('message')") {{ errors.first('message') }}
   .button-wrapper
-    Button(@click="submitForm", :disabled="isButtonDisabled()")
+    Button(:disabled="isButtonDisabled()", :type="'submit'")
 </template>
 
 <script>
@@ -70,8 +70,7 @@ export default {
         return this[key];
       });
     },
-    submitForm(e) {
-      e.preventDefault();
+    submitForm() {
       this.$validator.validateAll().then((result) => {
         if (result) {
           this.postForm();
@@ -95,7 +94,7 @@ export default {
             name: <b>${this.name}</b>
           </div>
           <div>
-            telegram, e-mail or something: <b>${this.email}</b>
+            telegram, e-mail or something: <b>${this.contact}</b>
           </div>
           <div>
             message: <b>${this.message}</b>

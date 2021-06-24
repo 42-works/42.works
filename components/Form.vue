@@ -1,5 +1,5 @@
 <template lang="pug">
-form.form(@submit="submitForm")
+form.form(@submit.prevent="submitForm")
   .form__wrapper
     .form__row
       .input-wrapper(:class="{ active: name.length > 0 }")
@@ -43,7 +43,7 @@ form.form(@submit="submitForm")
         )
         span.help.is-danger(v-show="errors.has('message')") {{ errors.first('message') }}
     .form__row
-      Button(@click="submitForm", :disabled="isButtonDisabled()")
+      Button(:disabled="isButtonDisabled()", :type="'submit'")
 </template>
 
 <script>
@@ -75,8 +75,7 @@ export default {
       });
     },
 
-    submitForm(e) {
-      e.preventDefault();
+    submitForm() {
       this.$validator.validateAll().then((result) => {
         if (result) {
           this.postForm();
