@@ -31,7 +31,7 @@
       | Мы используем последние технологии, и не засиживаемся в фабриках фабрик энтерпрайз легаси. Работаем по принципу "клиент не всегда прав", культивируем здоровую культуру труда и делимся нашим опытом с локальным комьюнити.
     .main-image
       Star
-      img(src="../assets/images/eugen.png" class="eugen-img" alt="main-img")
+      img.eugen-img(src="../assets/images/eugen.png", alt="main-img")
     .text.text-after-photo
       | Сейчас мы проводим небольшой набор в команду с максимально гибкими условиями:
     .text_wrapper
@@ -39,29 +39,32 @@
         .title
           | Парт тайм
         .description
-          |  для тех, кто еще учится и хочет познакомиться с индустрией
+          |
+          | для тех, кто еще учится и хочет познакомиться с индустрией
       .text-item.line
       .text-item
         .title
           | Фулл тайм
         .description
-          |  для тех, кто решил не писать диплом и уже имеет опыт работы.
+          |
+          | для тех, кто решил не писать диплом и уже имеет опыт работы.
     .text.text-after-item
-      |  Если тебе интересны веб технологии и кроссплатформенная мобильная разработка – пиши
+      |
+      | Если тебе интересны веб технологии и кроссплатформенная мобильная разработка – пиши
     .eye
       Eye
 </template>
 
 <script>
-import Star from '~/assets/images/star.svg?inline'
-import Eye from '~/assets/images/eye.svg?inline'
+import Star from "~/assets/images/star.svg?inline";
+import Eye from "~/assets/images/eye.svg?inline";
 
 export default {
   components: {
     Star,
-    Eye
+    Eye,
   },
-}
+};
 </script>
 
 <style lang="scss">
@@ -140,13 +143,13 @@ export default {
   }
 
   .text-item.line {
-    content: '';
+    content: "";
     display: flex;
     align-items: center;
     justify-content: center;
     width: 0px;
     height: 58px;
-    border: 1px solid #A1A1A1;
+    border: 1px solid #a1a1a1;
   }
 
   .main-image {
@@ -165,7 +168,7 @@ export default {
     margin-top: 88px;
   }
 
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     .top-title {
       font-size: 24px;
       line-height: 33px;
@@ -186,12 +189,12 @@ export default {
       object-fit: contain;
     }
     .main-image {
-      max-width: 468px;
-      svg {
-        width: 100%
+      .eugen-img {
+        position: absolute;
+        top: 20%;
       }
       img {
-        width: 100%;
+        width: 70%;
       }
     }
     .text_wrapper {
