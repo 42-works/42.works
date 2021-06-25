@@ -16,7 +16,9 @@
     .conditions
       Conditions
     .contact(:ref="'contact'")
-      Contact
+      Contact(@toggleModal="toggleModal")
+  transition(name="fade")
+    Modal(v-if="showModal", :toggleModal="toggleModal", :modalText="modalText")
 </template>
 
 <script>
@@ -25,6 +27,7 @@ import Swiper from "~/components/SliderLanding";
 import Slider from "~/components/SliderLanding";
 import Contact from "~/components/ContactLanding";
 import Conditions from "~/components/ConditionsLanding";
+import Modal from "~/components/Modal";
 
 import Tetris from "~/components/Tetris";
 
@@ -36,6 +39,7 @@ export default {
     Tetris,
     Slider,
     Contact,
+    Modal,
     Conditions,
   },
 
@@ -44,6 +48,8 @@ export default {
       isTetrisActive: false,
       touchStart: 0,
       touchEnd: 0,
+      showModal: false,
+      modalText: "",
     };
   },
 
@@ -76,6 +82,16 @@ export default {
 
     touchStartHandler(e) {
       this.touchStart = e.touches[0].clientY;
+    },
+    toggleModal(status) {
+      if (status === 200) {
+        this.modalText = "Your message has been sent!";
+      } else {
+        this.modalText =
+          "The message has not been sent. Please try again later";
+      }
+
+      this.showModal = !this.showModal;
     },
   },
 };
@@ -116,17 +132,25 @@ export default {
 }
 .before-slider.text {
   padding-left: 26px;
-    padding-right: 26px;
+  padding-right: 26px;
   p {
     margin-top: 28px;
     text-align: center;
-    
+  }
+  .fade-enter,
+  .fade-leave-active {
+    opacity: 0;
+  }
+
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.5s ease;
   }
 }
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .conditions {
-      margin: 100px auto 0 auto;
-    }
+    margin: 100px auto 0 auto;
+  }
   .contact {
     padding-left: 26px;
     padding-right: 26px;
@@ -143,6 +167,4 @@ export default {
   background-color: #151515;
   color: #ffffff;
 }
-
-
 </style>
