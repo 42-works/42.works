@@ -51,28 +51,19 @@
       </div>
     </div>
   </div>
-  
 </template>
 
 <script>
-
 import { Swiper, SwiperSlide, Navigation, directive } from "vue-awesome-swiper";
-// import Swiper, {
-//   Navigation
-// } from 'swiper';
 
 Swiper.use([Navigation]);
 
 export default {
-  
   components: {
     Swiper,
     SwiperSlide,
     Navigation
   },
-
-  
-  
   data() {
     return {
       swiperOption: {
@@ -88,7 +79,6 @@ export default {
       }
     };
   }
-  
 };
 </script>
 
@@ -96,29 +86,19 @@ export default {
   .slider-mobile {
     display:none;
   }
-// @import "./base.scss";
   .swiper-container {
     height: 460px!important;
   }
-  
-  
-  .swiper {
-    // background: red;
-  }
   .slide {
     width: 518px!important;
-    
   }
   .slide-title {
-    font-weight: 600;
+    font-weight: bold;
     font-size: 40px;
     line-height: 56px;
     letter-spacing: 0.01em;
-    color: #FFFFFF;
   }
   .slide-subtitle {
-    font-family: Cabin;
-    font-weight: normal;
     font-size: 18px;
     line-height: 40px;
     letter-spacing: 0.01em;
@@ -126,7 +106,7 @@ export default {
   }
   .slide-img {
     width: 100%;
-    margin-top: 28px;
+    margin-top: 24px;
     transition: 0.2s;
     z-index: 100;
     &:hover {

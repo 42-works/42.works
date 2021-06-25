@@ -144,6 +144,7 @@ export default {
 }
 .form {
   &__input {
+    font-family: 'play';
     height: 60px;
     width: 100%;
     border: 0.5px solid #868487;
@@ -169,7 +170,8 @@ export default {
   .button-wrapper ::v-deep .button {
     height: 56px;
     width: 157px;
-
+    font-family: 'play';
+    font-size: 18px;
     color: #ffffff;
     border: 2px solid $white;
     background-color: $black;

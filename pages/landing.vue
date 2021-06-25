@@ -6,7 +6,7 @@
   .content
     img.bg(:src="require(`../assets/images/landing/bg-top.svg`)")
     img.bg.bg-bottom(:src="require(`../assets/images/landing/bg-bottom.svg`)")
-    .before-slider.text
+    .text-before-slider
       p
       | Мы занимаемся решением задач бизнеса во всемирной сети интернет.
       p
@@ -104,9 +104,27 @@ export default {
   margin: 0 auto;
   padding: 40px 16px 0;
 }
-.before-slider {
-  max-width: 579px;
+.text-before-slider {
+  max-width: 620px;
+  text-align: center;
   margin: 100px auto 0 auto;
+  padding-left: 26px;
+  padding-right: 26px;
+  font-size: 16px;
+  line-height: 170%;
+  letter-spacing: 0.01em;
+  p {
+    margin-top: 28px;
+  }
+  .fade-enter,
+  .fade-leave-active {
+    opacity: 0;
+  }
+
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.5s ease;
+  }
 }
 .slider {
   margin-top: 107px;
@@ -129,23 +147,6 @@ export default {
   bottom: 0;
   left: 0;
   right: 0;
-}
-.before-slider.text {
-  padding-left: 26px;
-  padding-right: 26px;
-  p {
-    margin-top: 28px;
-    text-align: center;
-  }
-  .fade-enter,
-  .fade-leave-active {
-    opacity: 0;
-  }
-
-  .fade-enter-active,
-  .fade-leave-active {
-    transition: opacity 0.5s ease;
-  }
 }
 @media (max-width: 768px) {
   .conditions {

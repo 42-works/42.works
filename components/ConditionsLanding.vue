@@ -98,24 +98,20 @@ export default {
     letter-spacing: 0.01em;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 26px;
+    padding-right: 26px;
   }
   .text-after-stack {
     max-width: 720px;
     margin-top: 60px;
-    padding-left: 26px;
-    padding-right: 26px;
   }
   .text-after-photo {
-    max-width: 384px;
+    max-width: 450px;
     margin-top: 88px;
-    padding-left: 26px;
-    padding-right: 26px;
   }
   .text-after-item {
-    max-width: 447px;
+    max-width: 460px;
     margin-top: 57px;
-    padding-left: 26px;
-    padding-right: 26px;
   }
   .text_wrapper {
     display: flex;
@@ -169,7 +165,6 @@ export default {
   }
 
   @media(max-width: 768px) {
-    
     .top-title {
       font-size: 24px;
       line-height: 33px;

@@ -12,9 +12,9 @@
   .header-content
     .header-info
       .header-title
-        | </Привет,
+        | <Привет,
       .header-title-small
-        | это студия разработки 42:/>
+        | это студия разработки 42/>
       .logo.mobile
         .logo-image(ref="logo")
           Logo
@@ -132,12 +132,10 @@ export default {
   justify-content: space-between;
   align-items: center;
 }
-
 .phone {
   flex: 1 1;
   margin: 0 33px;
 }
-
 .text-contact {
   align-items: center;
   font-weight: 300;
@@ -145,71 +143,62 @@ export default {
   line-height: 170%;
   letter-spacing: 0.01em;
 }
-
 .telegram-icon img {
   width: 100%;
   display: block;
   margin-left: 16px;
   width: 20px;
 }
-
 .header-content {
   display: flex;
   margin-top: 135px;
 }
-
+.header-info {
+  margin-right: 10px;
+}
 .header-title {
   font-weight: 700;
   font-size: 56px;
   line-height: 69px;
   letter-spacing: 0.01em;
 }
-
 .header-title-small {
   margin-top: 12px;
   font-size: 28px;
   line-height: 34px;
   letter-spacing: 0.01em;
 }
-
 .text-header {
   margin-top: 62px;
   font-weight: 300;
   font-size: 16px;
   line-height: 32px;
 }
-
 .logo.mobile {
   display: none;
 }
-
 .logo {
   position: relative;
-  margin-left: 230px;
+  margin-left: auto;
 }
-
 .logo-image {
   position: relative;
   z-index: 10;
   width: 445px;
   height: 316px;
 }
-
 .logo-shadow {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 9;
 }
-
 .logo-shadow svg {
   width: 445px;
 }
-
 .button-header {
   margin-top: 20px;
 }
-
 .button-header ::v-deep .button {
   height: 47px;
   width: 236px;
@@ -217,25 +206,21 @@ export default {
   color: #ffffff;
   border: 2px solid $white;
   background-color: $black;
-
   &:before {
     width: 236px;
     height: 8px;
     border-top: 8px solid $white;
     border-left: 8px solid transparent;
   }
-
   &:after {
     height: 55px;
     width: 8px;
     border-left: 8px solid $white;
     border-top: 8px solid transparent;
   }
-
   &:hover {
     background-color: #3431dc;
   }
-
   &:active {
     top: 8px;
     left: 8px;
@@ -255,8 +240,8 @@ export default {
     }
   }
 }
-@media(max-width: 768px) {
 
+@media(max-width: 768px) {
   .header-contact {
       display: none;
     }
@@ -271,7 +256,6 @@ export default {
     display: flex;
     justify-content: center;
     margin: 45px auto;
-
   }
   .logo-image {
     max-width: 261px;
@@ -300,8 +284,5 @@ export default {
   .button {
     margin: auto;
   }
-
-  }
-
-
+}
 </style>
