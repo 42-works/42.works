@@ -8,7 +8,7 @@
     .telegram
       .text-contact
         | telegram
-      img.telegram-icon(:src="require(`../assets/images/landing/telegram.svg`)")
+      img.telegram-icon(:src="require(`~/assets/images/we-are-hiring/telegram.svg`)")
   .header-content
     .header-info
       .header-title
@@ -32,9 +32,9 @@
 </template>
 
 <script>
-import Logo from "../assets/images/logo-main.svg?inline";
-import LogoShadow from "../assets/images/landing/logo-main-shadow.svg?inline";
-import Button from "~/components/Button";
+import Logo from "~/assets/images/logo-main.svg?inline";
+import LogoShadow from "~/assets/images/we-are-hiring/logo-main-shadow.svg?inline";
+import Button from "../Button";
 
 export default {
   components: {

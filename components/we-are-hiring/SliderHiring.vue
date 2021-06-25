@@ -5,25 +5,23 @@
         <div class='slide-title'>Matter.online</div>
         <div class='slide-subtitle'>Full stack development</div>
         <div class='slide-img'>
-          <a href="project/1"><img src="../assets/images/matter.jpg"/></a>
+          <a href="project/1"><img src="~/assets/images/we-are-hiring/matter.jpg"/></a>
         </div>
       </swiper-slide>
       <swiper-slide class="slide">
         <div class='slide-title'>Palmyra</div>
         <div class='slide-subtitle'>Full stack development</div>
         <div class='slide-img'>
-          <a href="project/2"><img src="../assets/images/palmyra.jpg"/></a>
+          <a href="project/2"><img src="~/assets/images/we-are-hiring/palmyra.jpg"/></a>
         </div>
       </swiper-slide>
       <swiper-slide class="slide">
         <div class='slide-title'>Pizza Sicilia</div>
         <div class='slide-subtitle'>Full stack development</div>
         <div class='slide-img'>
-          <a href="project/11"><img src="../assets/images/sicilia.jpg"/></a>
+          <a href="project/11"><img src="~/assets/images/we-are-hiring/sicilia.jpg"/></a>
         </div>
       </swiper-slide>
-      <!-- <div class="swiper-button-prev" slot="button-prev"></div>
-      <div class="swiper-button-next" slot="button-next"></div> -->
     </swiper>
 
 
@@ -32,21 +30,21 @@
         <div class='slide-title'>Matter.online</div>
         <div class='slide-subtitle'>Full stack development</div>
         <div class='item-img'>
-          <a href="project/1"><img src="../assets/images/matter.jpg"/></a>
+          <a href="project/1"><img src="~/assets/images/we-are-hiring/matter.jpg"/></a>
         </div>
       </div>
       <div class="item">
         <div class='slide-title'>Palmyra</div>
         <div class='slide-subtitle'>Full stack development</div>
         <div class='item-img'>
-          <a href="project/2"><img src="../assets/images/palmyra.jpg"/></a>
+          <a href="project/2"><img src="~/assets/images/we-are-hiring/palmyra.jpg"/></a>
         </div>
       </div>
       <div class="item">
         <div class='slide-title'>Pizza Sicilia</div>
         <div class='slide-subtitle'>Full stack development</div>
         <div class='item-img'>
-          <a href="project/11"><img src="../assets/images/sicilia.jpg"/></a>
+          <a href="project/11"><img src="~/assets/images/we-are-hiring/sicilia.jpg"/></a>
         </div>
       </div>
     </div>

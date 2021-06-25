@@ -4,34 +4,34 @@
       | Наш стек
     .image-list
       .image-item
-        img.icon(:src="require(`../assets/images/landing/react.svg`)")
+        img.icon(:src="require(`~/assets/images/we-are-hiring/react.svg`)")
         .icon-text
           | React
       .image-item
-        img.icon(:src="require(`../assets/images/landing/vue.svg`)")
+        img.icon(:src="require(`~/assets/images/we-are-hiring/vue.svg`)")
         .icon-text
           | Vue
       .image-item
-        img.icon(:src="require(`../assets/images/landing/ruby.svg`)")
+        img.icon(:src="require(`~/assets/images/we-are-hiring/ruby.svg`)")
         .icon-text
           | Ruby
       .image-item
-        img.icon(:src="require(`../assets/images/landing/elixir.svg`)")
+        img.icon(:src="require(`~/assets/images/we-are-hiring/elixir.svg`)")
         .icon-text
           | Elixir
       .image-item
-        img.icon(:src="require(`../assets/images/landing/node.svg`)")
+        img.icon(:src="require(`~/assets/images/we-are-hiring/node.svg`)")
         .icon-text
           | Node
       .image-item
-        img.icon(:src="require(`../assets/images/landing/solidity.svg`)")
+        img.icon(:src="require(`~/assets/images/we-are-hiring/solidity.svg`)")
         .icon-text
           | Solidity
     .text.text-after-stack
       | Мы используем последние технологии, и не засиживаемся в фабриках фабрик энтерпрайз легаси. Работаем по принципу "клиент не всегда прав", культивируем здоровую культуру труда и делимся нашим опытом с локальным комьюнити.
     .main-image
       Star
-      img.eugen-img(src="../assets/images/eugen.png", alt="main-img")
+      img.eugen-img(src="~/assets/images/we-are-hiring/eugen.png", alt="main-img")
     .text.text-after-photo
       | Сейчас мы проводим небольшой набор в команду с максимально гибкими условиями:
     .text_wrapper
@@ -58,8 +58,8 @@
 </template>
 
 <script>
-import Star from "~/assets/images/star.svg?inline";
-import Eye from "~/assets/images/eye.svg?inline";
+import Star from "~/assets/images/we-are-hiring/star.svg?inline";
+import Eye from "~/assets/images/we-are-hiring/eye.svg?inline";
 
 export default {
   components: {

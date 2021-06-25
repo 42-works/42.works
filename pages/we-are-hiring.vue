@@ -1,11 +1,11 @@
 <template lang="pug">
-.landing(ref="landing")
+.hiring(ref="hiring")
   <!-- Tetris(v-if="isTetrisActive", :color="'#FFFFFF'", :opacity="0.1") -->
   .header
     Header
   .content
-    img.bg(:src="require(`../assets/images/landing/bg-top.svg`)")
-    img.bg.bg-bottom(:src="require(`../assets/images/landing/bg-bottom.svg`)")
+    img.bg(:src="require(`../assets/images/we-are-hiring/bg-top.svg`)")
+    img.bg.bg-bottom(:src="require(`../assets/images/we-are-hiring/bg-bottom.svg`)")
     .text-before-slider
       p
       | Мы занимаемся решением задач бизнеса во всемирной сети интернет.
@@ -22,11 +22,11 @@
 </template>
 
 <script>
-import Header from "~/components/HeaderLanding";
-import Swiper from "~/components/SliderLanding";
-import Slider from "~/components/SliderLanding";
-import Contact from "~/components/ContactLanding";
-import Conditions from "~/components/ConditionsLanding";
+import Header from "~/components/we-are-hiring/HeaderHiring";
+import Swiper from "~/components/we-are-hiring/SliderHiring";
+import Slider from "~/components/we-are-hiring/SliderHiring";
+import Contact from "~/components/we-are-hiring/ContactHiring";
+import Conditions from "~/components/we-are-hiring/ConditionsHiring";
 import Modal from "~/components/Modal";
 
 import Tetris from "~/components/Tetris";
@@ -97,6 +97,17 @@ export default {
 };
 </script>
 
+<style lang="scss">
+.hiring {
+  font-family: play;
+  font-weight: 300;
+  font-style: normal;
+  position: relative;
+  background-color: #151515;
+  color: #ffffff;
+}
+</style>
+
 <style lang="scss" scoped>
 .header {
   max-width: 1075px;
@@ -162,16 +173,5 @@ export default {
     padding-left: 26px;
     padding-right: 26px;
   }
-}
-</style>
-
-<style lang="scss">
-.landing {
-  font-family: play;
-  font-weight: 300;
-  font-style: normal;
-  position: relative;
-  background-color: #151515;
-  color: #ffffff;
 }
 </style>

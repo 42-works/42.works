@@ -44,7 +44,7 @@ form.form(@submit.prevent="submitForm")
 </template>
 
 <script>
-import Button from "./Button";
+import Button from "../Button";
 
 export default {
   components: {
