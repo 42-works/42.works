@@ -8,13 +8,12 @@
 </template>
 
 <script>
-const CREATE_EL_TIME = 2300
-
+const CREATE_EL_TIME = 2300;
 
 export default {
   props: {
     color: String,
-    opacity: Number,
+    opacity: Number
   },
 
   data() {
@@ -31,7 +30,7 @@ export default {
   mounted() {
     if (process.browser) {
       this.tetris = this.$refs.tetris;
-      this.containerHeight = this.tetris.clientHeight
+      this.containerHeight = this.tetris.clientHeight;
       this.interval = setInterval(() => {
         this.createTetrisElem();
       }, CREATE_EL_TIME);
@@ -45,23 +44,28 @@ export default {
   methods: {
     createTetrisElem() {
       this.getLeftOffset();
-      const el =
-        this.$refs[
-          `el-${this.getRandomInt(this.types.length - 1)}`
-        ][0].cloneNode(true);
+      const el = this.$refs[
+        `el-${this.getRandomInt(this.types.length - 1)}`
+      ][0].cloneNode(true);
       el.style.transform = `rotate(${
         this.transform[this.getRandomInt(this.transform.length)]
       }deg)`;
       this.tetris.appendChild(el);
+      const animationTime = this.containerHeight / 2;
+      console.log(
+        "🚀 ~ file: Tetris.vue ~ line 55 ~ createTetrisElem ~ animationTime",
+        animationTime
+      );
+
       setTimeout(() => {
         this.lastLeftOffset = this.leftOffset;
         el.style.left = this.leftOffset + "px";
-        el.style.top = this.containerHeight + "px"
-        // el.classList.add("active");
+        el.style.transition = `top ${animationTime / 60}s linear`;
+        el.style.top = this.containerHeight + "px";
       }, 1000);
       setTimeout(() => {
         el.remove();
-      }, 15000);
+      }, animationTime * 60);
     },
 
     getRandomInt(max) {
@@ -76,8 +80,8 @@ export default {
       ) {
         return this.getLeftOffset();
       }
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -107,8 +111,6 @@ $borderWidth: 2px;
   top: -($size * 4);
   position: absolute;
   overflow: hidden;
-
-  transition: top 15s linear;
 }
 
 .el-1 {
@@ -244,9 +246,5 @@ $borderWidth: 2px;
     left: $size - $borderWidth;
     top: $size - $borderWidth;
   }
-}
-
-.el.active {
-  top: calc(100% + 210px);
 }
 </style>
