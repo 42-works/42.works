@@ -116,11 +116,11 @@ export default {
 }
 .before-slider.text {
   padding-left: 26px;
-    padding-right: 26px;
+  padding-right: 26px;
   p {
     margin-top: 28px;
     text-align: center;
-    
+
   }
 }
 @media(max-width: 768px) {
@@ -136,7 +136,7 @@ export default {
 
 <style lang="scss">
 .landing {
-  font-family: noto-sans, monospace;
+  font-family: play;
   font-weight: 300;
   font-style: normal;
   position: relative;

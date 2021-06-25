@@ -19,7 +19,7 @@
         .logo-image(ref="logo")
           Logo
         .logo-shadow(ref="logoShadow")
-          LogoShadow  
+          LogoShadow
       .text-header
         | Нам нужны твои мозги.
       .button-header
@@ -159,7 +159,7 @@ export default {
 }
 
 .header-title {
-  font-weight: 400;
+  font-weight: 700;
   font-size: 56px;
   line-height: 69px;
   letter-spacing: 0.01em;
@@ -213,7 +213,7 @@ export default {
 .button-header ::v-deep .button {
   height: 47px;
   width: 236px;
-
+  font-family: 'play';
   color: #ffffff;
   border: 2px solid $white;
   background-color: $black;
@@ -256,7 +256,7 @@ export default {
   }
 }
 @media(max-width: 768px) {
-  
+
   .header-contact {
       display: none;
     }
@@ -271,7 +271,7 @@ export default {
     display: flex;
     justify-content: center;
     margin: 45px auto;
-    
+
   }
   .logo-image {
     max-width: 261px;
@@ -300,8 +300,8 @@ export default {
   .button {
     margin: auto;
   }
-  
+
   }
-  
+
 
 </style>
