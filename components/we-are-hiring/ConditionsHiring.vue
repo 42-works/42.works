@@ -1,5 +1,5 @@
 <template lang="pug">
-  .conditions
+  .conditions(ref="conditions")
     .top-title
       | Наш стек
     .image-list
@@ -51,7 +51,7 @@
     .text.text-after-item
       |
       | Если тебе интересны веб технологии и кроссплатформенная мобильная разработка – пиши
-    .eye
+    .eye(ref="eye")
       Eye
     .text-tell-about
       | Расскажи о себе
@@ -78,6 +78,7 @@ export default {
   }
   .image-list {
     display: flex;
+    justify-content: space-between;
     margin-top: 55px;
   }
   .image-item {
@@ -159,8 +160,9 @@ export default {
     margin-top: 60px;
     .eugen-img {
       position: absolute;
-      top: 18.8%;
-      right: 14.5%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
     }
   }
   .eye {
@@ -199,10 +201,6 @@ export default {
     }
     .main-image {
       margin-top: 40px;
-      .eugen-img {
-        position: absolute;
-        top: 20%;
-      }
       img {
         width: 70%;
       }

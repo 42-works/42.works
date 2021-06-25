@@ -11,16 +11,17 @@
       img.telegram-icon(:src="require(`~/assets/images/we-are-hiring/telegram.svg`)")
   .header-content
     .header-info
-      .header-title
-        | <Привет,
-      .header-title-small
-        | это студия разработки 42/>
+      .header-text
+        .header-title
+          | <Привет,
+        .header-title-small
+          | это студия разработки 42/>
       .logo.mobile
         .logo-image(ref="logo")
           Logo
         .logo-shadow(ref="logoShadow")
           LogoShadow
-      .text-header
+      .text-header#blink
         | Нам нужны твои мозги.
       .button-header
         Button(@click="scrollTo", :title="'Рассказать о себе'")
@@ -104,9 +105,6 @@ export default {
     mouseMove(evt) {
       this.mouse.X = evt.clientX;
       this.mouse.Y = evt.clientY;
-
-      const leftLogo = this.mouse.X - this.paralaxCenter.X;
-
       this.$refs.logo.style.top =
         -this.getOffset(this.mouse.Y - this.paralaxCenter.Y) + "px";
       this.$refs.logo.style.left =
@@ -127,6 +125,23 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+#blink {
+  -webkit-animation: blink 2s linear infinite;
+  animation: blink 2s linear infinite;
+}
+@keyframes blink {
+  0% { color: rgb(255, 255, 255); }
+  70% { color: rgb(114, 114, 114); }
+  90% { color: rgb(255, 255, 255); }
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: white }
+}
 .header-contact {
   display: flex;
   justify-content: space-between;
@@ -170,6 +185,13 @@ export default {
   font-size: 28px;
   line-height: 34px;
   letter-spacing: 0.01em;
+  overflow: hidden;
+  border-right: .15em solid white;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation:
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
 }
 .text-header {
   margin-top: 62px;
@@ -244,7 +266,7 @@ export default {
   }
 }
 
-@media(max-width: 768px) {
+@media(max-width: 850px) {
   .text-contact {
     font-size: 12px;
   }
@@ -258,6 +280,9 @@ export default {
   .header-content {
     margin-top: 0;
     flex-direction: column;
+  }
+  .header-title-small {
+    max-width: 270px;
   }
   .logo.desktop {
     display: none;

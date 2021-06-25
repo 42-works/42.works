@@ -141,7 +141,7 @@ export default {
   margin-top: 107px;
 }
 .conditions {
-  max-width: 710px;
+  max-width: 800px;
   margin: 160px auto 0 auto;
 }
 .contact {
