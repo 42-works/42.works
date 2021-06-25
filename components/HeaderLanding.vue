@@ -5,10 +5,10 @@
       | hello@42.com
     .text-contact.phone
       | +7 (999) 696-65-50
-    .text-contact
-      | telegram
-    .telegram-icon
-      img(:src="require(`../assets/images/landing/telegram.svg`)")
+    .telegram
+      .text-contact
+        | telegram
+      img.telegram-icon(:src="require(`../assets/images/landing/telegram.svg`)")
   .header-content
     .header-info
       .header-title
@@ -143,7 +143,10 @@ export default {
   line-height: 170%;
   letter-spacing: 0.01em;
 }
-.telegram-icon img {
+.telegram {
+  display: flex;
+}
+.telegram-icon {
   width: 100%;
   display: block;
   margin-left: 16px;
@@ -242,10 +245,17 @@ export default {
 }
 
 @media(max-width: 768px) {
-  .header-contact {
-      display: none;
-    }
-    .header-content {
+  .text-contact {
+    font-size: 12px;
+  }
+  .phone {
+    flex: none;
+    margin: 0;
+  }
+  .telegram-icon {
+    margin-left: 8px;
+  }
+  .header-content {
     margin-top: 0;
     flex-direction: column;
   }

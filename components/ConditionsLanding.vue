@@ -53,6 +53,8 @@
       | Если тебе интересны веб технологии и кроссплатформенная мобильная разработка – пиши
     .eye
       Eye
+    .text-tell-about
+      | Расскажи о себе
 </template>
 
 <script>
@@ -167,6 +169,13 @@ export default {
     justify-content: center;
     margin-top: 88px;
   }
+  .text-tell-about {
+    margin-top: 24px;
+    font-size: 24px;
+    line-height: 56px;
+    text-align: center;
+    letter-spacing: 0.01em;
+  }
 
   @media (max-width: 768px) {
     .top-title {
@@ -189,6 +198,7 @@ export default {
       object-fit: contain;
     }
     .main-image {
+      margin-top: 40px;
       .eugen-img {
         position: absolute;
         top: 20%;
@@ -197,11 +207,20 @@ export default {
         width: 70%;
       }
     }
+    .text-after-photo {
+      margin-top: 40px;
+    }
+    .text-after-item {
+      margin-top: 40px;
+    }
     .text_wrapper {
       flex-direction: column;
     }
     .text-item.line {
       transform: rotate(90deg);
+    }
+    .eye {
+      margin-top: 80px;
     }
   }
 </style>

@@ -135,7 +135,7 @@ export default {
 }
 .contact {
   max-width: 710px;
-  margin: 24px auto 0 auto;
+  margin: 20px auto 0 auto;
   padding-bottom: 90px;
 }
 .bg {
@@ -149,6 +149,9 @@ export default {
   right: 0;
 }
 @media (max-width: 768px) {
+  .header {
+    padding-top: 23px;
+  }
   .conditions {
     margin: 100px auto 0 auto;
   }
