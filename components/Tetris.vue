@@ -8,6 +8,9 @@
 </template>
 
 <script>
+const CREATE_EL_TIME = 2300
+
+
 export default {
   props: {
     color: String,
@@ -21,15 +24,17 @@ export default {
       interval: null,
       leftOffset: null,
       lastLeftOffset: null,
+      containerHeight: 0
     };
   },
 
   mounted() {
     if (process.browser) {
       this.tetris = this.$refs.tetris;
+      this.containerHeight = this.tetris.clientHeight
       this.interval = setInterval(() => {
         this.createTetrisElem();
-      }, 2300);
+      }, CREATE_EL_TIME);
     }
   },
 
@@ -51,7 +56,8 @@ export default {
       setTimeout(() => {
         this.lastLeftOffset = this.leftOffset;
         el.style.left = this.leftOffset + "px";
-        el.classList.add("active");
+        el.style.top = this.containerHeight + "px"
+        // el.classList.add("active");
       }, 1000);
       setTimeout(() => {
         el.remove();
@@ -241,6 +247,6 @@ $borderWidth: 2px;
 }
 
 .el.active {
-  top: 110vh;
+  top: calc(100% + 210px);
 }
 </style>

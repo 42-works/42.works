@@ -278,7 +278,7 @@ export default {
     margin-left: 8px;
   }
   .header-content {
-    margin-top: 0;
+    margin-top: 30px;
     flex-direction: column;
   }
   .header-title-small {
