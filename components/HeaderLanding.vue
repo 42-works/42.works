@@ -268,6 +268,7 @@ export default {
   }
   .header-info {
     text-align: center;
+    margin-right: 0;
   }
   .header-title {
     font-size: 40px;

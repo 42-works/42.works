@@ -20,7 +20,7 @@
         .icon-text
           | Elixir
       .image-item
-        img.icon(:src="require(`../assets/images/landing/node.png`)")
+        img.icon(:src="require(`../assets/images/landing/node.svg`)")
         .icon-text
           | Node
       .image-item
@@ -81,6 +81,7 @@ export default {
   }
   .icon {
     margin: 0 20px;
+    max-width: 124px;
   }
   .icon-text {
     margin-top: 30px;
@@ -171,10 +172,18 @@ export default {
     }
     .image-list {
       margin-top: 20px;
-      flex-flow: row wrap;
+      padding-left: 32px;
+      padding-right: 32px;
+      width: 100%;
+      align-items: center;
+      display: grid;
+      grid-template-columns: repeat(auto-fill,minmax(91px,1fr));
+      gap: 16px 26px;
     }
-    .image-item {
-        margin-top: 36px;
+    .icon {
+      height: 70px;
+      margin: 0;
+      object-fit: contain;
     }
     .main-image {
       max-width: 468px;
@@ -192,9 +201,4 @@ export default {
       transform: rotate(90deg);
     }
   }
-   @media(max-width: 358px) {
-     .image-list {
-       justify-content: center;
-     }
-   }
 </style>

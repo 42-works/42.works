@@ -105,7 +105,7 @@ export default {
   padding: 40px 16px 0;
 }
 .text-before-slider {
-  max-width: 620px;
+  max-width: 650px;
   text-align: center;
   margin: 100px auto 0 auto;
   padding-left: 26px;
@@ -151,6 +151,9 @@ export default {
 @media (max-width: 768px) {
   .conditions {
     margin: 100px auto 0 auto;
+  }
+  .slider {
+    margin-top: 73px;
   }
   .contact {
     padding-left: 26px;
