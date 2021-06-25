@@ -114,6 +114,24 @@ export default {
   left: 0;
   right: 0;
 }
+.before-slider.text {
+  padding-left: 26px;
+    padding-right: 26px;
+  p {
+    margin-top: 28px;
+    text-align: center;
+    
+  }
+}
+@media(max-width: 768px) {
+  .conditions {
+      margin: 100px auto 0 auto;
+    }
+  .contact {
+    padding-left: 26px;
+    padding-right: 26px;
+  }
+}
 </style>
 
 <style lang="scss">
@@ -125,4 +143,6 @@ export default {
   background-color: #151515;
   color: #ffffff;
 }
+
+
 </style>

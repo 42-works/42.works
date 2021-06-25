@@ -102,14 +102,20 @@ export default {
   .text-after-stack {
     max-width: 720px;
     margin-top: 60px;
+    padding-left: 26px;
+    padding-right: 26px;
   }
   .text-after-photo {
     max-width: 384px;
     margin-top: 88px;
+    padding-left: 26px;
+    padding-right: 26px;
   }
   .text-after-item {
     max-width: 447px;
     margin-top: 57px;
+    padding-left: 26px;
+    padding-right: 26px;
   }
   .text_wrapper {
     display: flex;
@@ -161,4 +167,39 @@ export default {
     justify-content: center;
     margin-top: 88px;
   }
+
+  @media(max-width: 768px) {
+    
+    .top-title {
+      font-size: 24px;
+      line-height: 33px;
+    }
+    .image-list {
+      margin-top: 20px;
+      flex-flow: row wrap;
+    }
+    .image-item {
+        margin-top: 36px;
+    }
+    .main-image {
+      max-width: 468px;
+      svg {
+        width: 100%
+      }
+      img {
+        width: 100%;
+      }
+    }
+    .text_wrapper {
+      flex-direction: column;
+    }
+    .text-item.line {
+      transform: rotate(90deg);
+    }
+  }
+   @media(max-width: 358px) {
+     .image-list {
+       justify-content: center;
+     }
+   }
 </style>

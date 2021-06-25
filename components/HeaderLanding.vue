@@ -15,11 +15,16 @@
         | </Привет,
       .header-title-small
         | это студия разработки 42:/>
+      .logo.mobile
+        .logo-image(ref="logo")
+          Logo
+        .logo-shadow(ref="logoShadow")
+          LogoShadow  
       .text-header
         | Нам нужны твои мозги.
       .button-header
         Button(@click="scrollTo", :title="'Рассказать о себе'")
-    .logo
+    .logo.desktop
       .logo-image(ref="logo")
         Logo
       .logo-shadow(ref="logoShadow")
@@ -174,6 +179,10 @@ export default {
   line-height: 32px;
 }
 
+.logo.mobile {
+  display: none;
+}
+
 .logo {
   position: relative;
   margin-left: 230px;
@@ -246,4 +255,53 @@ export default {
     }
   }
 }
+@media(max-width: 768px) {
+  
+  .header-contact {
+      display: none;
+    }
+    .header-content {
+    margin-top: 0;
+    flex-direction: column;
+  }
+  .logo.desktop {
+    display: none;
+  }
+  .logo.mobile {
+    display: flex;
+    justify-content: center;
+    margin: 45px auto;
+    
+  }
+  .logo-image {
+    max-width: 261px;
+    height: auto;
+  }
+  .logo-shadow {
+    display: none;
+    top: 48px;
+    right: 73px;
+  }
+  .header-info {
+    text-align: center;
+  }
+  .header-title {
+    font-size: 40px;
+  }
+  .header-title-small {
+    margin-top: 0px;
+    font-size: 20px;
+    line-height: 27px;
+  }
+  .text-header {
+    font-size: 16px;
+    line-height: 32px;
+  }
+  .button {
+    margin: auto;
+  }
+  
+  }
+  
+
 </style>
