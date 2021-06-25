@@ -22,7 +22,7 @@
           <a href="project/11"><img src="~/assets/images/we-are-hiring/sicilia.jpg"/></a>
         </div>
       </swiper-slide>
-      <swiper-slide class="slide">
+      <!-- <swiper-slide class="slide">
         <div class='slide-title'>Mighty</div>
         <div class='slide-subtitle'>Mobile app</div>
         <div class='slide-img'>
@@ -42,7 +42,7 @@
         <div class='slide-img'>
           <a href="#"><img src="~/assets/images/we-are-hiring/violet.jpg"/></a>
         </div>
-      </swiper-slide>
+      </swiper-slide> -->
     </swiper>
 
 
@@ -68,7 +68,7 @@
           <a href="project/11"><img src="~/assets/images/we-are-hiring/sicilia.jpg"/></a>
         </div>
       </div>
-      <div class="item">
+      <!-- <div class="item">
         <div class='slide-title'>Mighty</div>
         <div class='slide-subtitle'>Mobile app</div>
         <div class='item-img'>
@@ -88,7 +88,7 @@
         <div class='item-img'>
           <a href="#"><img src="~/assets/images/we-are-hiring/violet.jpg"/></a>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
