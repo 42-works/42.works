@@ -22,6 +22,27 @@
           <a href="project/11"><img src="~/assets/images/we-are-hiring/sicilia.jpg"/></a>
         </div>
       </swiper-slide>
+      <swiper-slide class="slide">
+        <div class='slide-title'>Mighty</div>
+        <div class='slide-subtitle'>Mobile app</div>
+        <div class='slide-img'>
+          <a href="#"><img src="~/assets/images/we-are-hiring/mighty.jpg"/></a>
+        </div>
+      </swiper-slide>
+      <swiper-slide class="slide">
+        <div class='slide-title'>Confetti</div>
+        <div class='slide-subtitle'>Full stack development</div>
+        <div class='slide-img'>
+          <a href="#"><img src="~/assets/images/we-are-hiring/confetti.jpg"/></a>
+        </div>
+      </swiper-slide>
+      <swiper-slide class="slide">
+        <div class='slide-title'>Violet</div>
+        <div class='slide-subtitle'>Backend development</div>
+        <div class='slide-img'>
+          <a href="#"><img src="~/assets/images/we-are-hiring/violet.jpg"/></a>
+        </div>
+      </swiper-slide>
     </swiper>
 
 
@@ -45,6 +66,27 @@
         <div class='slide-subtitle'>Full stack development</div>
         <div class='item-img'>
           <a href="project/11"><img src="~/assets/images/we-are-hiring/sicilia.jpg"/></a>
+        </div>
+      </div>
+      <div class="item">
+        <div class='slide-title'>Mighty</div>
+        <div class='slide-subtitle'>Mobile app</div>
+        <div class='item-img'>
+          <a href="#"><img src="~/assets/images/we-are-hiring/mighty.jpg"/></a>
+        </div>
+      </div>
+      <div class="item">
+        <div class='slide-title'>Confetti</div>
+        <div class='slide-subtitle'>Full stack development</div>
+        <div class='item-img'>
+          <a href="#"><img src="~/assets/images/we-are-hiring/confetti.jpg"/></a>
+        </div>
+      </div>
+      <div class="item">
+        <div class='slide-title'>Violet</div>
+        <div class='slide-subtitle'>Backend development</div>
+        <div class='item-img'>
+          <a href="#"><img src="~/assets/images/we-are-hiring/violet.jpg"/></a>
         </div>
       </div>
     </div>
