@@ -1,24 +1,25 @@
 <template lang="pug">
 .hiring(ref="hiring")
   Tetris(v-if="isTetrisActive", :color="'#FFFFFF'", :opacity="0.1")
-  .header
-    Header
-  .content
-    img.bg(:src="require(`../assets/images/we-are-hiring/bg-top.svg`)")
-    img.bg.bg-bottom(:src="require(`../assets/images/we-are-hiring/bg-bottom.svg`)")
-    .text-before-slider
-      p
-      | Мы занимаемся решением задач бизнеса во всемирной сети интернет.
-      p
-      | От лендосиков до музыкальных стриминоговых платформ на блокчейне, от сайтов доставки пиццы до сервисов Банка Силикиновой Долины.
-    .slider
-      Swiper
-    .conditions
-      Conditions
-    .contact(:ref="'contact'")
-      Contact(@toggleModal="toggleModal")
-  transition(name="fade")
-    Modal(v-if="showModal", :toggleModal="toggleModal", :modalText="modalText")
+  .main
+    .header
+      Header
+    .content
+      img.bg(:src="require(`../assets/images/we-are-hiring/bg-top.svg`)")
+      img.bg.bg-bottom(:src="require(`../assets/images/we-are-hiring/bg-bottom.svg`)")
+      .text-before-slider
+        p
+        | Мы занимаемся решением задач бизнеса во всемирной сети интернет.
+        p
+        | От лендосиков до музыкальных стриминоговых платформ на блокчейне, от сайтов доставки пиццы до сервисов Банка Силикиновой Долины.
+      .slider
+        Swiper
+      .conditions
+        Conditions
+      .contact(:ref="'contact'")
+        Contact(@toggleModal="toggleModal")
+    transition(name="fade")
+      Modal(v-if="showModal", :toggleModal="toggleModal", :modalText="modalText")
 </template>
 
 <script>
@@ -40,7 +41,7 @@ export default {
     Slider,
     Contact,
     Modal,
-    Conditions,
+    Conditions
   },
 
   data() {
@@ -49,7 +50,7 @@ export default {
       touchStart: 0,
       touchEnd: 0,
       showModal: false,
-      modalText: "",
+      modalText: ""
     };
   },
 
@@ -92,8 +93,8 @@ export default {
       }
 
       this.showModal = !this.showModal;
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -109,6 +110,10 @@ export default {
 </style>
 
 <style lang="scss" scoped>
+.main {
+  position: relative;
+  z-index: 1;
+}
 .header {
   max-width: 1075px;
   height: 589px;

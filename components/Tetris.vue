@@ -9,6 +9,7 @@
 
 <script>
 const CREATE_EL_TIME = 2300;
+const EL_HEIGHT = 136;
 
 export default {
   props: {
@@ -23,6 +24,7 @@ export default {
       interval: null,
       leftOffset: null,
       lastLeftOffset: null,
+      animationTimeSec: 0,
       containerHeight: 0
     };
   },
@@ -31,6 +33,7 @@ export default {
     if (process.browser) {
       this.tetris = this.$refs.tetris;
       this.containerHeight = this.tetris.clientHeight;
+      this.animationTimeSec = this.tetris.clientHeight / 1.1 / 60; // animation time seconds
       this.interval = setInterval(() => {
         this.createTetrisElem();
       }, CREATE_EL_TIME);
@@ -51,21 +54,14 @@ export default {
         this.transform[this.getRandomInt(this.transform.length)]
       }deg)`;
       this.tetris.appendChild(el);
-      const animationTime = this.containerHeight / 2;
-      console.log(
-        "🚀 ~ file: Tetris.vue ~ line 55 ~ createTetrisElem ~ animationTime",
-        animationTime
-      );
 
       setTimeout(() => {
         this.lastLeftOffset = this.leftOffset;
-        el.style.left = this.leftOffset + "px";
-        el.style.transition = `top ${animationTime / 60}s linear`;
-        el.style.top = this.containerHeight + "px";
+        el.style.cssText = `left: ${this.leftOffset}px; transition: top ${this.animationTimeSec}s linear; top: ${this.containerHeight}px`;
       }, 1000);
       setTimeout(() => {
         el.remove();
-      }, animationTime * 60);
+      }, this.animationTimeSec * 1000 + 1000); // animation time miliseconds
     },
 
     getRandomInt(max) {
