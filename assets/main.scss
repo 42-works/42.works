@@ -1,38 +1,62 @@
 @font-face {
-  font-family: 'bio-sans';
-  src: url('~static/fonts/BioSans-Light.woff2') format('woff2'),
-      url('~static/fonts/BioSans-Light.woff') format('woff');
+  font-family: "bio-sans";
+  src: url("~static/fonts/BioSans-Light.woff2") format("woff2"),
+    url("~static/fonts/BioSans-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'bio-sans';
-  src: url('~static/fonts/BioSans-Regular.woff2') format('woff2'),
-      url('~static/fonts/BioSans-Regular.woff') format('woff');
+  font-family: "bio-sans";
+  src: url("~static/fonts/BioSans-Regular.woff2") format("woff2"),
+    url("~static/fonts/BioSans-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'bio-sans';
-  src: url('~static/fonts/BioSans-Bold.woff2') format('woff2'),
-      url('~static/fonts/BioSans-Bold.woff') format('woff');
+  font-family: "bio-sans";
+  src: url("~static/fonts/BioSans-Bold.woff2") format("woff2"),
+    url("~static/fonts/BioSans-Bold.woff") format("woff");
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'bio-sans';
-  src: url('~static/fonts/BioSans-SemiBold.woff2') format('woff2'),
-      url('~static/fonts/BioSans-SemiBold.woff') format('woff');
+  font-family: "bio-sans";
+  src: url("~static/fonts/BioSans-SemiBold.woff2") format("woff2"),
+    url("~static/fonts/BioSans-SemiBold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
 }
 
+@font-face {
+  font-family: "play";
+  src: url("~static/fonts/Play-Regular.eot");
+  src: url("~static/fonts/Play-Regular.eot?#iefix") format("embedded-opentype"),
+    url("~static/fonts/Play-Regular.woff2") format("woff2"),
+    url("~static/fonts/Play-Regular.woff") format("woff"),
+    url("~static/fonts/Play-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "play";
+  src: url("~static/fonts/Play-Bold.eot");
+  src: url("~static/fonts/Play-Bold.eot?#iefix") format("embedded-opentype"),
+    url("~static/fonts/Play-Bold.woff2") format("woff2"),
+    url("~static/fonts/Play-Bold.woff") format("woff"),
+    url("~static/fonts/Play-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   margin: 0;
-  font-family: 'bio-sans';
+  font-family: "bio-sans";
 }
 
 .page {
@@ -51,22 +75,24 @@ body {
 .gradient {
   width: 23.6%;
 
-  background: linear-gradient(180deg, #3431DC 0%, #615EEE 100%);
+  background: linear-gradient(180deg, #3431dc 0%, #615eee 100%);
 }
 
 .page-gradient .content {
   width: 76.4%;
 }
 
-.page-enter-active, .page-leave-active {
-  transition: opacity .3s ease;
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.3s ease;
 }
 
 .page-enter-active {
-  transition-delay: .3s;
+  transition-delay: 0.3s;
 }
 
-.page-enter, .page-leave-active {
+.page-enter,
+.page-leave-active {
   opacity: 0;
 }
 

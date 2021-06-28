@@ -1,0 +1,116 @@
+@font-face {
+  font-family: 'bio-sans';
+  src: url("~static/fonts/BioSans-Light.woff2") format("woff2"), url("~static/fonts/BioSans-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'bio-sans';
+  src: url("~static/fonts/BioSans-Regular.woff2") format("woff2"), url("~static/fonts/BioSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'bio-sans';
+  src: url("~static/fonts/BioSans-Bold.woff2") format("woff2"), url("~static/fonts/BioSans-Bold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'bio-sans';
+  src: url("~static/fonts/BioSans-SemiBold.woff2") format("woff2"), url("~static/fonts/BioSans-SemiBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: 'bio-sans';
+}
+
+.page {
+  margin-top: 80px;
+}
+
+.page-gradient {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  min-height: calc(100vh - 80px);
+  min-height: 100vh;
+  color: rgba(0, 1, 5, 0.6);
+}
+
+.gradient {
+  width: 23.6%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#3431DC), to(#615EEE));
+  background: linear-gradient(180deg, #3431DC 0%, #615EEE 100%);
+}
+
+.page-gradient .content {
+  width: 76.4%;
+}
+
+.page-enter-active, .page-leave-active {
+  -webkit-transition: opacity .3s ease;
+  transition: opacity .3s ease;
+}
+
+.page-enter-active {
+  -webkit-transition-delay: .3s;
+          transition-delay: .3s;
+}
+
+.page-enter, .page-leave-active {
+  opacity: 0;
+}
+
+.container {
+  max-width: 994px;
+  width: 100%;
+  padding-left: 32px;
+  padding-right: 32px;
+  margin: 0 auto;
+}
+
+.gradient-container {
+  max-width: 911px;
+  padding-left: 86px;
+  padding-right: 280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+@media (max-width: 1024px) {
+  .gradient-container {
+    max-width: 530px;
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .page {
+    margin-top: 0;
+  }
+}
+/*# sourceMappingURL=main.css.map */
