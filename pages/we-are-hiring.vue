@@ -5,8 +5,8 @@
     .header
       Header
     .content
-      img.bg(:src="require(`../assets/images/we-are-hiring/bg-top.svg`)")
-      img.bg.bg-bottom(:src="require(`../assets/images/we-are-hiring/bg-bottom.svg`)")
+      canvas.bg(:ref="'waves_top'")
+      canvas.bg.bg-bottom(:ref="'waves_bottom'")
       .text-before-slider
         p
         | Мы занимаемся решением задач бизнеса во всемирной сети интернет.
@@ -29,6 +29,8 @@ import Slider from "~/components/we-are-hiring/SliderHiring";
 import Contact from "~/components/we-are-hiring/ContactHiring";
 import Conditions from "~/components/we-are-hiring/ConditionsHiring";
 import Modal from "~/components/Modal";
+
+import { drawWaves } from "~/components/we-are-hiring/waves";
 
 import Tetris from "~/components/Tetris";
 
@@ -61,6 +63,9 @@ export default {
     if (process.browser) {
       window.addEventListener("resize", this.onResize);
       this.onResize();
+
+      drawWaves(this.$refs.waves_top);
+      drawWaves(this.$refs.waves_bottom);
     }
   },
 
