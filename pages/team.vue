@@ -88,11 +88,11 @@ export default {
           name: "Igor Bostan",
           position: "Middle Backend Developer"
         },
-        // {
-        //   image: 'eugenia.jpg',
-        //   name: 'Emil Karamanov',
-        //   position: 'Middle Frontend Developer'
-        // },
+        {
+          image: 'emil.jpg',
+          name: 'Emil Karamanov',
+          position: 'Middle Frontend Developer'
+        },
         {
           image: "kirill.jpg",
           name: "Kirill Zhaborovskiy",
