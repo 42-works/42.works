@@ -94,7 +94,7 @@ function loadShader(gl, type, source) {
   return shader;
 }
 
-const initShaderProgram = (gl) => {
+const initShaderProgram = gl => {
   const vertexShader = loadShader(gl, gl.VERTEX_SHADER, vertex_shader);
   const fragmentShader = loadShader(gl, gl.FRAGMENT_SHADER, fragment_shaders);
 
@@ -113,7 +113,7 @@ const initShaderProgram = (gl) => {
   return shaderProgram;
 };
 
-export const createShaderProgram = (gl) => {
+export const createShaderProgram = gl => {
   const shaderProgram = initShaderProgram(gl);
   if (shaderProgram === null) return null;
   const uniforms = {
@@ -128,13 +128,13 @@ export const createShaderProgram = (gl) => {
     xRangeLocation: gl.getUniformLocation(shaderProgram, "x_range"),
     yRangeLocation: gl.getUniformLocation(shaderProgram, "y_range"),
     lineRatioLocation: gl.getUniformLocation(shaderProgram, "line_ratio"),
-    lineCountLocation: gl.getUniformLocation(shaderProgram, "line_count"),
+    lineCountLocation: gl.getUniformLocation(shaderProgram, "line_count")
   };
   const attributes = {
     coordsLocation: gl.getAttribLocation(shaderProgram, "coord"),
-    texCoordLocation: gl.getAttribLocation(shaderProgram, "texCoord"),
+    texCoordLocation: gl.getAttribLocation(shaderProgram, "texCoord")
   };
-  const setAnimationParam = (t) => {
+  const setAnimationParam = t => {
     gl.useProgram(shaderProgram);
     gl.uniform1f(uniforms.animationParamLocation, t);
   };
@@ -170,13 +170,13 @@ export const createShaderProgram = (gl) => {
     mat4.perspectiveFromFieldOfView(
       projectionMatrix,
       {
-        upDegrees: 20,
+        upDegrees: 25,
 
         downDegrees: 25,
 
         leftDegrees: 15,
 
-        rightDegrees: 15,
+        rightDegrees: 15
       },
       1,
       10000
@@ -198,6 +198,6 @@ export const createShaderProgram = (gl) => {
     setViewProjectionMatrix,
     setAnimationParam,
     setFunctionParams,
-    useShader,
+    useShader
   };
 };
