@@ -2,10 +2,13 @@
 .header-landing(ref="header")
   .header-contact
     .text-contact
-      | hello@42.com
+      a(href='mailto:hello@42.com')
+        | hello@42.com
     .text-contact.phone
-      | +7 (999) 696-65-50
-    .telegram
+      a(href="tel:+7(999)696-65-50")
+        | +7 (999) 696-65-50
+
+    a(title='Telegram' href='https://telegram.me/adimov' class="telegram" target='_blank')
       .text-contact
         | telegram
       img.telegram-icon(:src="require(`~/assets/images/we-are-hiring/telegram.svg`)")
@@ -41,19 +44,19 @@ export default {
   components: {
     Logo,
     LogoShadow,
-    Button,
+    Button
   },
 
   data() {
     return {
       mouse: {
         X: 0,
-        Y: 0,
+        Y: 0
       },
       paralaxCenter: {
         X: 0,
-        Y: 0,
-      },
+        Y: 0
+      }
     };
   },
 
@@ -117,10 +120,10 @@ export default {
     scrollTo() {
       this.$parent.$refs.contact.scrollIntoView({
         behavior: "smooth",
-        alignToTop: true,
+        alignToTop: true
       });
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -130,17 +133,32 @@ export default {
   animation: blink 2s linear infinite;
 }
 @keyframes blink {
-  0% { color: rgb(255, 255, 255); }
-  70% { color: rgb(114, 114, 114); }
-  90% { color: rgb(255, 255, 255); }
+  0% {
+    color: rgb(255, 255, 255);
+  }
+  70% {
+    color: rgb(114, 114, 114);
+  }
+  90% {
+    color: rgb(255, 255, 255);
+  }
 }
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: white }
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
 }
 .header-contact {
   display: flex;
@@ -152,14 +170,20 @@ export default {
   margin: 0 33px;
 }
 .text-contact {
-  align-items: center;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 170%;
-  letter-spacing: 0.01em;
+  a {
+    align-items: center;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 170%;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    color: #ffffff;
+  }
 }
 .telegram {
   display: flex;
+  color: #ffffff;
+  text-decoration: none;
 }
 .telegram-icon {
   width: 100%;
@@ -186,12 +210,10 @@ export default {
   line-height: 34px;
   letter-spacing: 0.01em;
   overflow: hidden;
-  border-right: .15em solid white;
+  border-right: 0.15em solid white;
   white-space: nowrap;
   margin: 0 auto;
-  animation:
-    typing 3.5s steps(30, end),
-    blink-caret .5s step-end infinite;
+  animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
 }
 .text-header {
   margin-top: 62px;
@@ -227,7 +249,7 @@ export default {
 .button-header ::v-deep .button {
   height: 47px;
   width: 236px;
-  font-family: 'play';
+  font-family: "play";
   color: #ffffff;
   border: 2px solid $white;
   background-color: $black;
@@ -266,16 +288,24 @@ export default {
   }
 }
 
-@media(max-width: 850px) {
+@media (max-width: 850px) {
   .text-contact {
-    font-size: 12px;
+    a {
+      font-size: 13px;
+    }
   }
   .phone {
     flex: none;
     margin: 0;
+    a {
+      font-size: 12px;
+    }
   }
   .telegram-icon {
     margin-left: 8px;
+  }
+  .telegram {
+    font-size: 14px;
   }
   .header-content {
     margin-top: 30px;
