@@ -79,7 +79,7 @@ export default {
         {
           hid: "twitter:image",
           property: "twitter:image",
-          content: MetaImage
+          content: "https://42.works" + MetaImage
         },
         {
           hid: "twitter:image:alt",
@@ -94,7 +94,7 @@ export default {
         {
           hid: "og:image",
           property: "og:image",
-          content: MetaImage
+          content: "https://42.works" + MetaImage
         },
         {
           hid: "og:title",
