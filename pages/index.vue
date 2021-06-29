@@ -151,11 +151,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
-body {
-  background-color: #3431dc;
-}
-</style>
+<style lang="scss"></style>
 
 <style scoped lang="scss">
 .home {

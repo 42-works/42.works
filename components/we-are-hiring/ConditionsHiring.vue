@@ -4,27 +4,27 @@
       | Наш стек
     .image-list
       .image-item
-        img.icon(:src="require(`~/assets/images/we-are-hiring/react.svg`)")
+        React.icon
         .icon-text
           | React
       .image-item
-        img.icon(:src="require(`~/assets/images/we-are-hiring/vue.svg`)")
+        Vue.icon
         .icon-text
           | Vue
       .image-item
-        img.icon(:src="require(`~/assets/images/we-are-hiring/ruby.svg`)")
+        Ruby.icon
         .icon-text
           | Ruby
       .image-item
-        img.icon(:src="require(`~/assets/images/we-are-hiring/elixir.svg`)")
+        Elixir.icon
         .icon-text
           | Elixir
       .image-item
-        img.icon(:src="require(`~/assets/images/we-are-hiring/node.svg`)")
+        Node.icon
         .icon-text
           | Node
       .image-item
-        img.icon(:src="require(`~/assets/images/we-are-hiring/solidity.svg`)")
+        Solidity.icon
         .icon-text
           | Solidity
     .text.text-after-stack
@@ -61,10 +61,23 @@
 import Star from "~/assets/images/we-are-hiring/star.svg?inline";
 import Eye from "~/assets/images/we-are-hiring/eye.svg?inline";
 
+import React from "~/assets/images/we-are-hiring/react.svg?inline";
+import Vue from "~/assets/images/we-are-hiring/vue.svg?inline";
+import Ruby from "~/assets/images/we-are-hiring/ruby.svg?inline";
+import Elixir from "/assets/images/we-are-hiring/elixir.svg?inline";
+import Node from "~/assets/images/we-are-hiring/node.svg?inline";
+import Solidity from "~/assets/images/we-are-hiring/solidity.svg?inline";
+
 export default {
   components: {
     Star,
-    Eye
+    Eye,
+    React,
+    Vue,
+    Ruby,
+    Elixir,
+    Node,
+    Solidity
   },
 
   data() {
@@ -118,7 +131,7 @@ export default {
 }
 .icon {
   margin: 0 20px;
-  max-width: 124px;
+  height: 76px;
 }
 .icon-text {
   margin-top: 30px;
