@@ -1,6 +1,6 @@
 <template lang="pug">
 .hiring(ref="hiring")
-  Tetris(v-if="isTetrisActive", :color="'#FFFFFF'", :opacity="0.1")
+  Tetris(v-if="isTetrisActive", :color="'#d7d7d7'", :opacity="0.1")
   .main
     .header
       Header
