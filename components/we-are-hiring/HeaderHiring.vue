@@ -11,7 +11,7 @@
     a(title='Telegram' href='https://telegram.me/adimov' class="telegram" target='_blank')
       .text-contact
         | telegram
-      img.telegram-icon(:src="require(`~/assets/images/we-are-hiring/telegram.svg`)")
+      TelegramIcon.telegram-icon
   .header-content
     .header-info
       .header-text
@@ -37,6 +37,7 @@
 
 <script>
 import Logo from "~/assets/images/logo-main.svg?inline";
+import TelegramIcon from "~/assets/images/we-are-hiring/telegram.svg?inline";
 import LogoShadow from "~/assets/images/we-are-hiring/logo-main-shadow.svg?inline";
 import Button from "../Button";
 
@@ -44,7 +45,8 @@ export default {
   components: {
     Logo,
     LogoShadow,
-    Button
+    Button,
+    TelegramIcon
   },
 
   data() {
@@ -189,7 +191,6 @@ export default {
   width: 100%;
   display: block;
   margin-left: 16px;
-  width: 20px;
 }
 .header-content {
   display: flex;

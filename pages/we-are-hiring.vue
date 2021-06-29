@@ -35,6 +35,7 @@ import { drawWaves } from "~/components/we-are-hiring/waves";
 import Tetris from "~/components/Tetris";
 
 import ConcoleLog from "!raw-loader!~/assets/ascii-art.txt";
+import MetaImage from "~/assets/images/we-are-hiring/meta-image.jpg";
 
 export default {
   components: {
@@ -46,6 +47,67 @@ export default {
     Contact,
     Modal,
     Conditions
+  },
+  head() {
+    return {
+      meta: [
+        {
+          hid: "title",
+          name: "title",
+          content: "We are Hiring!"
+        },
+        {
+          hid: "description",
+          name: "description",
+          content: "42 - We are Hiring!"
+        },
+        {
+          hid: "twitter:title",
+          property: "twitter:title",
+          content: "42 - We Create the Face of the Internet"
+        },
+        {
+          hid: "twitter:description",
+          property: "twitter:description",
+          content: "We are hiring"
+        },
+        {
+          hid: "twitter:card",
+          property: "twitter:card",
+          content: "summary_large_image!"
+        },
+        {
+          hid: "twitter:image",
+          property: "twitter:image",
+          content: MetaImage
+        },
+        {
+          hid: "twitter:image:alt",
+          property: "twitter:image:alt",
+          content: "42 - We are Hiring"
+        },
+        {
+          hid: "twitter:url",
+          property: "twitter:url",
+          content: "https://42.works/"
+        },
+        {
+          hid: "og:image",
+          property: "og:image",
+          content: MetaImage
+        },
+        {
+          hid: "og:title",
+          property: "og:title",
+          content: "42.works"
+        },
+        {
+          hid: "og:description",
+          property: "og:description",
+          content: "We are Hiring!"
+        }
+      ]
+    };
   },
 
   data() {
@@ -114,6 +176,10 @@ export default {
   position: relative;
   background-color: #151515;
   color: #ffffff;
+}
+
+body {
+  background-color: #151515;
 }
 </style>
 
