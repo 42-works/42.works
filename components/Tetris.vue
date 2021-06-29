@@ -1,10 +1,10 @@
 <template lang="pug">
 .tetris(ref="tetris")
   div(:class="`el el-${index}`", v-for="index in 6", :ref="`el-${index}`")
-    .square(:style="{ border: `2px solid ${color}`, opacity: opacity }")
-    .square(:style="{ border: `2px solid ${color}`, opacity: opacity }")
-    .square(:style="{ border: `2px solid ${color}`, opacity: opacity }")
-    .square(:style="{ border: `2px solid ${color}`, opacity: opacity }")
+    .square(:style="{ border: `2px solid ${color}` }")
+    .square(:style="{ border: `2px solid ${color}` }")
+    .square(:style="{ border: `2px solid ${color}` }")
+    .square(:style="{ border: `2px solid ${color}` }")
 </template>
 
 <script>
@@ -14,7 +14,6 @@ const EL_HEIGHT = 136;
 export default {
   props: {
     color: String,
-    opacity: Number
   },
 
   data() {

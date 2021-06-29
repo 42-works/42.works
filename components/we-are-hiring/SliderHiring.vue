@@ -2,116 +2,109 @@
   <div>
     <swiper class="swiper" :options="swiperOption">
       <swiper-slide class="slide">
-        <div class="slide-title">Matter.online</div>
-        <div class="slide-subtitle">Full stack development</div>
-        <div class="slide-img">
-          <a href="project/1"
-            ><img src="~/assets/images/we-are-hiring/matter.jpg"
-          /></a>
-        </div>
+        <a href="./project/1">
+          <div class="slide-title">Matter.online</div>
+          <div class="slide-subtitle">Full stack development</div>
+          <div class="slide-img">
+            <img src="~/assets/images/we-are-hiring/matter.jpg" />
+          </div>
+        </a>
       </swiper-slide>
+
       <swiper-slide class="slide">
-        <div class="slide-title">Palmyra</div>
-        <div class="slide-subtitle">Full stack development</div>
-        <div class="slide-img">
-          <a href="project/2"
-            ><img src="~/assets/images/we-are-hiring/palmyra.jpg"
-          /></a>
-        </div>
+        <a href="./project/2">
+          <div class="slide-title">Palmyra</div>
+          <div class="slide-subtitle">Full stack development</div>
+          <div class="slide-img">
+            <img src="~/assets/images/we-are-hiring/palmyra.jpg" />
+          </div>
+        </a>
       </swiper-slide>
+
       <swiper-slide class="slide">
-        <div class="slide-title">Pizza Sicilia</div>
-        <div class="slide-subtitle">Full stack development</div>
-        <div class="slide-img">
-          <a href="project/11"
-            ><img src="~/assets/images/we-are-hiring/sicilia.jpg"
-          /></a>
-        </div>
+        <a href="./project/11">
+          <div class="slide-title">Pizza Sicilia</div>
+          <div class="slide-subtitle">Full stack development</div>
+          <div class="slide-img">
+            <img src="~/assets/images/we-are-hiring/sicilia.jpg" />
+          </div>
+        </a>
       </swiper-slide>
+
       <swiper-slide class="slide">
-        <div class="slide-title">Mighty</div>
-        <div class="slide-subtitle">Mobile app</div>
-        <div class="slide-img">
-          <a href="https://mighty.business/" target="_blank">
+        <a href="https://mighty.business/" target="_blank">
+          <div class="slide-title">Mighty</div>
+          <div class="slide-subtitle">Mobile app</div>
+          <div class="slide-img">
             <img src="~/assets/images/we-are-hiring/mighty.jpg" />
-          </a>
-        </div>
+          </div>
+        </a>
       </swiper-slide>
+
       <swiper-slide class="slide">
-        <div class="slide-title">Confetti</div>
-        <div class="slide-subtitle">Full stack development</div>
-        <div class="slide-img">
-          <a href="https://www.confettiapp.io/" target="_blank">
+        <a href="https://www.confettiapp.io/" target="_blank">
+          <div class="slide-title">Confetti</div>
+          <div class="slide-subtitle">Full stack development</div>
+          <div class="slide-img">
             <img src="~/assets/images/we-are-hiring/confetti.jpg" />
-          </a>
-        </div>
+          </div>
+        </a>
       </swiper-slide>
+
       <swiper-slide class="slide">
-        <div class="slide-title">Violet</div>
-        <div class="slide-subtitle">Backend development</div>
-        <div class="slide-img">
-          <a href="https://www.joinviolet.com/" target="_blank">
+        <a href="https://www.joinviolet.com/" target="_blank">
+          <div class="slide-title">Violet</div>
+          <div class="slide-subtitle">Backend development</div>
+          <div class="slide-img">
             <img src="~/assets/images/we-are-hiring/violet.jpg" />
-          </a>
-        </div>
+          </div>
+        </a>
       </swiper-slide>
     </swiper>
 
     <div class="slider-mobile">
-      <div class="item">
+      <a href="./project/1" class="item">
         <div class="slide-title">Matter.online</div>
         <div class="slide-subtitle">Full stack development</div>
         <div class="item-img">
-          <a href="project/1"
-            ><img src="~/assets/images/we-are-hiring/matter.jpg"
-          /></a>
+          <img src="~/assets/images/we-are-hiring/matter.jpg" />
         </div>
-      </div>
-      <div class="item">
+      </a>
+      <a href="./project/2" class="item">
         <div class="slide-title">Palmyra</div>
         <div class="slide-subtitle">Full stack development</div>
         <div class="item-img">
-          <a href="project/2"
-            ><img src="~/assets/images/we-are-hiring/palmyra.jpg"
-          /></a>
+          <img src="~/assets/images/we-are-hiring/palmyra.jpg" />
         </div>
-      </div>
-      <div class="item">
+      </a>
+      <a href="./project/11" class="item">
         <div class="slide-title">Pizza Sicilia</div>
         <div class="slide-subtitle">Full stack development</div>
         <div class="item-img">
-          <a href="project/11"
-            ><img src="~/assets/images/we-are-hiring/sicilia.jpg"
-          /></a>
+          <img src="~/assets/images/we-are-hiring/sicilia.jpg" />
         </div>
-      </div>
-      <div class="item">
+      </a>
+      <a href="https://mighty.business/" target="_blank" class="item">
         <div class="slide-title">Mighty</div>
         <div class="slide-subtitle">Mobile app</div>
         <div class="item-img">
-          <a href="https://mighty.business/" target="_blank">
-            <img src="~/assets/images/we-are-hiring/mighty.jpg" />
-          </a>
+          <img src="~/assets/images/we-are-hiring/mighty.jpg" />
         </div>
-      </div>
-      <div class="item">
+      </a>
+      <a href="https://www.confettiapp.io/" target="_blank" class="item">
         <div class="slide-title">Confetti</div>
         <div class="slide-subtitle">Full stack development</div>
         <div class="item-img">
-          <a href="https://www.confettiapp.io/" target="_blank">
-            <img src="~/assets/images/we-are-hiring/confetti.jpg" />
-          </a>
+          <img src="~/assets/images/we-are-hiring/confetti.jpg" />
         </div>
-      </div>
-      <div class="item">
+      </a>
+      <a href="https://www.joinviolet.com/" target="_blank" class="item">
         <div class="slide-title">Violet</div>
         <div class="slide-subtitle">Backend development</div>
         <div class="item-img">
-          <a href="https://www.joinviolet.com/" target="_blank">
-            <img src="~/assets/images/we-are-hiring/violet.jpg" />
-          </a>
+          <img src="~/assets/images/we-are-hiring/violet.jpg" />
         </div>
-      </div>
+      </a>
     </div>
   </div>
 </template>
@@ -154,6 +147,16 @@ export default {
 }
 .slide {
   width: 518px !important;
+  a {
+    color: #ffffff;
+    text-decoration: none;
+    &:hover {
+      .slide-img {
+        transform-origin: 50% 50%;
+        transform: scale(1.1);
+      }
+    }
+  }
 }
 .slide-title {
   font-weight: bold;
@@ -172,10 +175,7 @@ export default {
   margin-top: 24px;
   transition: 0.2s;
   z-index: 100;
-  &:hover {
-    width: 115.9%;
-    transform: translate(-52px, -6%);
-  }
+
   img {
     width: 100%;
   }
@@ -185,9 +185,13 @@ export default {
   .slider-mobile {
     display: block;
     .item {
+      display: flex;
+      flex-direction: column;
       max-width: 100%;
       text-align: center;
       margin-top: 67px;
+      color: #ffffff;
+      text-decoration: none;
       .slide-title {
         font-size: 36px;
       }
@@ -198,6 +202,9 @@ export default {
   }
   .swiper-container {
     display: none;
+  }
+  .slide-subtitle {
+    margin-bottom: 12px;
   }
 }
 </style>
