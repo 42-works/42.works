@@ -1,6 +1,6 @@
 <template lang="pug">
 .hiring(ref="hiring")
-  Tetris(v-if="isTetrisActive", :color="'#d7d7d7'", :opacity="0.1")
+  Tetris(v-if="isTetrisActive", :color="'#1e1e1e'")
   .main
     .header
       Header
@@ -34,6 +34,8 @@ import { drawWaves } from "~/components/we-are-hiring/waves";
 
 import Tetris from "~/components/Tetris";
 
+import ConcoleLog from "!raw-loader!~/assets/ascii-art.txt";
+
 export default {
   components: {
     Header,
@@ -57,6 +59,7 @@ export default {
   },
 
   mounted() {
+    console.log(ConcoleLog);
     window.addEventListener("touchstart", this.touchStartHandler);
     window.addEventListener("touchend", this.touchEndHandler);
 

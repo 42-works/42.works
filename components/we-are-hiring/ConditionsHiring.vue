@@ -242,6 +242,7 @@ export default {
     height: 70px;
     margin: 0;
     object-fit: contain;
+    margin: 0 auto;
   }
   .main-image {
     margin-top: 40px;

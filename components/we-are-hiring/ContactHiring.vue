@@ -144,6 +144,7 @@ export default {
 }
 .form {
   &__input {
+    margin-top: 12px;
     font-family: 'play';
     height: 60px;
     width: 100%;
@@ -214,8 +215,9 @@ export default {
     }
   }
   .label {
+    margin-bottom: 12px;
     font-size: 16px;
-    line-height: 40px;
+    line-height: 130%;
     letter-spacing: 0.01em;
   }
   .input-wrapper {

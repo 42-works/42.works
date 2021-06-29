@@ -2,7 +2,7 @@
   <div>
     <swiper class="swiper" :options="swiperOption">
       <swiper-slide class="slide">
-        <a href="project/1">
+        <a href="./project/1">
           <div class="slide-title">Matter.online</div>
           <div class="slide-subtitle">Full stack development</div>
           <div class="slide-img">
@@ -12,7 +12,7 @@
       </swiper-slide>
 
       <swiper-slide class="slide">
-        <a href="project/2">
+        <a href="./project/2">
           <div class="slide-title">Palmyra</div>
           <div class="slide-subtitle">Full stack development</div>
           <div class="slide-img">
@@ -22,7 +22,7 @@
       </swiper-slide>
 
       <swiper-slide class="slide">
-        <a href="project/11">
+        <a href="./project/11">
           <div class="slide-title">Pizza Sicilia</div>
           <div class="slide-subtitle">Full stack development</div>
           <div class="slide-img">
@@ -63,21 +63,21 @@
     </swiper>
 
     <div class="slider-mobile">
-      <a href="project/1" class="item">
+      <a href="./project/1" class="item">
         <div class="slide-title">Matter.online</div>
         <div class="slide-subtitle">Full stack development</div>
         <div class="item-img">
           <img src="~/assets/images/we-are-hiring/matter.jpg" />
         </div>
       </a>
-      <a href="project/2" class="item">
+      <a href="./project/2" class="item">
         <div class="slide-title">Palmyra</div>
         <div class="slide-subtitle">Full stack development</div>
         <div class="item-img">
           <img src="~/assets/images/we-are-hiring/palmyra.jpg" />
         </div>
       </a>
-      <a href="project/11" class="item">
+      <a href="./project/11" class="item">
         <div class="slide-title">Pizza Sicilia</div>
         <div class="slide-subtitle">Full stack development</div>
         <div class="item-img">
@@ -202,6 +202,9 @@ export default {
   }
   .swiper-container {
     display: none;
+  }
+  .slide-subtitle {
+    margin-bottom: 12px;
   }
 }
 </style>
