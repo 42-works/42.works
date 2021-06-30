@@ -48,7 +48,7 @@ import Button from "../Button";
 
 export default {
   components: {
-    Button,
+    Button
   },
   data() {
     return {
@@ -56,7 +56,7 @@ export default {
       name: "",
       contact: "",
       message: "",
-      isFormSending: false,
+      isFormSending: false
     };
   },
   methods: {
@@ -66,12 +66,12 @@ export default {
       return false;
     },
     checkFormIsFull() {
-      this.formIsFull = Object.keys(this.fields).every((key) => {
+      this.formIsFull = Object.keys(this.fields).every(key => {
         return this[key];
       });
     },
     submitForm() {
-      this.$validator.validateAll().then((result) => {
+      this.$validator.validateAll().then(result => {
         if (result) {
           this.postForm();
           return;
@@ -106,30 +106,30 @@ export default {
         to: "boris@adimov.ru",
         subject: "42.works contact form",
         text: "yo",
-        html: createHtmlForEmail(),
+        html: createHtmlForEmail()
       };
 
       fetch("https://api.42.works/mailer", {
         method: "POST",
         body: JSON.stringify(letterData),
         headers: {
-          "Content-Type": "application/json",
-        },
+          "Content-Type": "application/json"
+        }
       })
-        .then((response) => {
+        .then(response => {
           // console.log('response', response)
           this.isFormSending = false;
           this.$emit("toggleModal", response.status);
           this.clearForm();
         })
-        .catch((err) => {
+        .catch(err => {
           console.err("err", err);
           this.isFormSending = false;
           this.$emit("toggleModal", response.status);
           this.clearForm();
         });
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -145,7 +145,7 @@ export default {
 .form {
   &__input {
     margin-top: 12px;
-    font-family: 'play';
+    font-family: "play";
     height: 60px;
     width: 100%;
     border: 0.5px solid #868487;
@@ -171,7 +171,7 @@ export default {
   .button-wrapper ::v-deep .button {
     height: 56px;
     width: 157px;
-    font-family: 'play';
+    font-family: "play";
     font-size: 18px;
     color: #ffffff;
     border: 2px solid $white;
@@ -244,4 +244,3 @@ export default {
   }
 }
 </style>
-

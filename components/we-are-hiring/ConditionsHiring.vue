@@ -4,27 +4,27 @@
       | Наш стек
     .image-list
       .image-item
-        React.icon
+        img.icon(src="~/assets/images/we-are-hiring/stack/react.png")
         .icon-text
           | React
       .image-item
-        Vue.icon
+        img.icon(src="~/assets/images/we-are-hiring/stack/vue.png")
         .icon-text
           | Vue
       .image-item
-        Ruby.icon
+        img.icon(src="~/assets/images/we-are-hiring/stack/ruby.png")
         .icon-text
           | Ruby
       .image-item
-        Elixir.icon
+        img.icon(src="~/assets/images/we-are-hiring/stack/elixir.png")
         .icon-text
           | Elixir
       .image-item
-        Node.icon
+        img.icon(src="~/assets/images/we-are-hiring/stack/node.png")
         .icon-text
           | Node
       .image-item
-        Solidity.icon
+        img.icon(src="~/assets/images/we-are-hiring/stack/solidity.png")
         .icon-text
           | Solidity
     .text.text-after-stack
@@ -194,9 +194,9 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 0px;
+  width: 1px;
+  background-color: #a1a1a1;
   height: 58px;
-  border: 1px solid #a1a1a1;
 }
 
 .main-image {
