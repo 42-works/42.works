@@ -307,6 +307,9 @@ export default {
   }
   .telegram {
     font-size: 14px;
+    .text-contact {
+      display: none;
+    }
   }
   .header-content {
     margin-top: 30px;

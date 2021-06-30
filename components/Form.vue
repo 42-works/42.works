@@ -51,7 +51,7 @@ import Button from "./Button.vue";
 
 export default {
   components: {
-    Button,
+    Button
   },
   data() {
     return {
@@ -59,7 +59,7 @@ export default {
       name: "",
       email: "",
       message: "",
-      isFormSending: false,
+      isFormSending: false
     };
   },
   methods: {
@@ -70,13 +70,13 @@ export default {
     },
 
     checkFormIsFull() {
-      this.formIsFull = Object.keys(this.fields).every((key) => {
+      this.formIsFull = Object.keys(this.fields).every(key => {
         return this[key];
       });
     },
 
     submitForm() {
-      this.$validator.validateAll().then((result) => {
+      this.$validator.validateAll().then(result => {
         if (result) {
           this.postForm();
           return;
@@ -113,30 +113,30 @@ export default {
         to: "boris@adimov.ru",
         subject: "42.works contact form",
         text: "yo",
-        html: createHtmlForEmail(),
+        html: createHtmlForEmail()
       };
 
       fetch("https://api.42.works/mailer", {
         method: "POST",
         body: JSON.stringify(letterData),
         headers: {
-          "Content-Type": "application/json",
-        },
+          "Content-Type": "application/json"
+        }
       })
-        .then((response) => {
+        .then(response => {
           // console.log('response', response)
           this.isFormSending = false;
           this.$emit("toggleModal", response.status);
           this.clearForm();
         })
-        .catch((err) => {
+        .catch(err => {
           console.err("err", err);
           this.isFormSending = false;
           this.$emit("toggleModal", response.status);
           this.clearForm();
         });
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -266,7 +266,6 @@ export default {
       height: 48px;
       padding: 8px;
       border-radius: 0;
-
       font-size: 18px;
     }
 
