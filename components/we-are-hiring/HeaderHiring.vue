@@ -188,7 +188,6 @@ export default {
   text-decoration: none;
 }
 .telegram-icon {
-  width: 100%;
   display: block;
   margin-left: 16px;
 }
