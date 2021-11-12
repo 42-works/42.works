@@ -27,7 +27,7 @@ export default {
 
   components: {
     Member,
-    Mail
+    Mail,
   },
 
   data() {
@@ -36,81 +36,76 @@ export default {
         {
           image: "boris.jpg",
           name: "Boris Adimov",
-          position: "CTO"
+          position: "CTO",
         },
         {
           image: "eugene.jpg",
           name: "Eugene Taktarov",
-          position: "Teamlead, Fullstack Developer"
-        },
-        {
-          image: "sergey.jpg",
-          name: "Sergey Paluy",
-          position: "CMO"
+          position: "Teamlead, Fullstack Developer",
         },
         {
           image: "vitaliy.jpg",
           name: "Vitaliy Galaychuk",
-          position: "Middle Backend Developer"
+          position: "Middle Backend Developer",
         },
         {
           image: "artyom.jpg",
           name: "Artyom Irza",
-          position: "Senior Backend Developer"
+          position: "Senior Backend Developer",
         },
         {
           image: "rita.jpg",
           name: "Margarita Popova",
-          position: "UI/UX Lead"
+          position: "UI/UX Lead",
         },
         {
           image: "eugenia.jpg",
           name: "Evgenia Skorik",
-          position: "Designer"
+          position: "Designer",
         },
         {
           image: "ivan.jpg",
           name: "Ivan Markov",
-          position: "Middle Frontend Developer"
+          position: "Middle Frontend Developer",
         },
         {
           image: "denis.jpg",
           name: "Denis Pelevin",
-          position: "Middle Frontend Developer"
+          position: "Middle Frontend Developer",
         },
         {
           image: "arseniy.jpg",
           name: "Arseniy Adimov",
-          position: "Middle Backend Developer"
+          position: "Middle Backend Developer",
         },
         {
           image: "igor.jpg",
           name: "Igor Bostan",
-          position: "Middle Backend Developer"
+          position: "Middle Backend Developer",
         },
         {
-          image: 'emil.jpg',
-          name: 'Emil Karamanov',
-          position: 'Middle Frontend Developer'
+          image: "emil.jpg",
+          name: "Emil Karamanov",
+          position: "Middle Frontend Developer",
         },
         {
           image: "kirill.jpg",
           name: "Kirill Zhaborovskiy",
-          position: "Middle Frontend Developer"
+          position: "Middle Frontend Developer",
         },
         {
           image: "dmitriy.jpg",
           name: "Dmitriy Nichyushkin",
-          position: "Backend Developer"
+          position: "Backend Developer",
         },
         {
           image: "viktor.jpg",
           name: "Victor Ivanov",
-          position: "Frontend Developer"
-        }
-      ]
+          position: "Frontend Developer",
+        },
+      ],
     };
-  }
+  },
 };
 </script>
 
