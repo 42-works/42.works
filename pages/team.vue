@@ -44,9 +44,14 @@ export default {
           position: "Teamlead, Fullstack Developer",
         },
         {
+          image: "dan.jpg",
+          name: "Daniil Reitman",
+          position: "CLO",
+        },
+        {
           image: "vitaliy.jpg",
           name: "Vitaliy Galaychuk",
-          position: "Middle Backend Developer",
+          position: "Senior Backend Developer",
         },
         {
           image: "artyom.jpg",
@@ -66,7 +71,7 @@ export default {
         {
           image: "ivan.jpg",
           name: "Ivan Markov",
-          position: "Middle Frontend Developer",
+          position: "Senior Frontend Developer",
         },
         {
           image: "denis.jpg",
@@ -89,6 +94,16 @@ export default {
           position: "Middle Frontend Developer",
         },
         {
+          image: "alina.jpg",
+          name: "Alina Kupriaynova",
+          position: "Middle Frontend Developer",
+        },
+        {
+          image: "daria.jpg",
+          name: "Daria Alekhina",
+          position: "Middle Frontend Developer",
+        },
+        {
           image: "kirill.jpg",
           name: "Kirill Zhaborovskiy",
           position: "Middle Frontend Developer",
@@ -97,11 +112,6 @@ export default {
           image: "dmitriy.jpg",
           name: "Dmitriy Nichyushkin",
           position: "Backend Developer",
-        },
-        {
-          image: "viktor.jpg",
-          name: "Victor Ivanov",
-          position: "Frontend Developer",
         },
       ],
     };
