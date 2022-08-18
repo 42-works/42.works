@@ -59,14 +59,9 @@ export default {
           position: "Senior Backend Developer",
         },
         {
-          image: "rita.jpg",
-          name: "Margarita Popova",
-          position: "UI/UX Lead",
-        },
-        {
           image: "eugenia.jpg",
           name: "Evgenia Skorik",
-          position: "Designer",
+          position: "UI/UX Lead",
         },
         {
           image: "ivan.jpg",
@@ -111,7 +106,7 @@ export default {
         {
           image: "dmitriy.jpg",
           name: "Dmitriy Nichyushkin",
-          position: "Backend Developer",
+          position: "Middle Backend Developer",
         },
       ],
     };
